@@ -59,7 +59,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1 text-black">
+          <nav className="hidden md:flex items-center gap-1 ">
             {navLinks.map(({ label, to }) => (
               <NavLink
                 key={to}
