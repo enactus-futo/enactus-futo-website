@@ -217,7 +217,7 @@ const About = () => {
         ))}
       </section>
 
-      {/* 2. OUR CORE VALUES SECTION */}
+      {/*  OUR CORE VALUES SECTION */}
       <section className="bg-[#1e1b4b] py-16 px-6 rounded-[20px] max-w-6xl mx-auto mb-16">
         <h2 className="text-white text-center text-xl font-bold mb-12">
           Our Core Values

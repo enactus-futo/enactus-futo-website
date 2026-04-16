@@ -25,7 +25,7 @@ export function Routes() {
           element: <About />,
         },
         {
-          path: "contactUs",
+          path: "contact",
           element: <ContactUs/>,
         },
         {
