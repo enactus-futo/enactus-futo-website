@@ -2,43 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Picture1 from "../assets/pics1.png";
-import Picture2 from "../assets/pics2.png";
-import Picture3 from "../assets/pics3.png";
+import { Trophy, Medal, Award } from "lucide-react";
+
 import Icon from "../assets/MissionIcon.png";
-import Logo from "../assets/logo.png";
+
 import { Frown } from "lucide-react";
+import Hero from "../component/hero";
 import GlobalImage from "../assets/pics1.png";
 
-const heroImages = [Picture1, Picture2, Picture3];
+
 
 const About = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState(
-    new Array(heroImages.length).fill(false),
-  );
-
-  // Auto-advance slideshow every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Preload all hero images
-  useEffect(() => {
-    heroImages.forEach((src, i) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        setImagesLoaded((prev) => {
-          const updated = [...prev];
-          updated[i] = true;
-          return updated;
-        });
-      };
-    });
-  }, []);
 
   // core values data
   const coreValues = [
@@ -72,23 +46,32 @@ const About = () => {
     },
   ];
 
-  const achievements = [
-    {
-      id: 1,
-      title: "2nd Runner Up National Finale 2025",
-      subtitle: "Competed at the Enactus Nigeria National Competition",
-    },
-    {
-      id: 2,
-      title: "Schneider Champions 2024",
-      subtitle: "Recognized for outstanding first-year performance",
-    },
-    {
-      id: 3,
-      title: "Action for Impact Award",
-      subtitle: "Awarded for community development excellence",
-    },
-  ];
+const achievements = [
+  {
+    id: 1,
+    title: "2nd Runner Up National Finale 2025",
+    subtitle: "Competed at the Enactus Nigeria National Competition",
+    icon: Medal,
+    color: "text-gray-500",
+    bg: "bg-gray-100",
+  },
+  {
+    id: 2,
+    title: "Schneider Champions 2024",
+    subtitle: "Recognized for outstanding first-year performance",
+    icon: Trophy,
+    color: "text-yellow-500",
+    bg: "bg-yellow-100",
+  },
+  {
+    id: 3,
+    title: "Action for Impact Award",
+    subtitle: "Awarded for community development excellence",
+    icon: Award,
+    color: "text-green-500",
+    bg: "bg-green-100",
+  },
+];
   return (
     <div className="w-full">
       {/* hero section */}
@@ -96,88 +79,7 @@ const About = () => {
         className="relative w-full overflow-hidden"
         style={{ height: "100dvh" }}
       >
-        {heroImages.map((src, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              i === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {!imagesLoaded[i] && (
-              <div className="absolute inset-0 bg-[#1B1464] flex flex-col items-center justify-center z-10 gap-4">
-                <img
-                  src={Logo}
-                  alt="Loading..."
-                  className="w-16 h-16 object-contain animate-pulse"
-                />
-                <div className="flex gap-1">
-                  {[0, 150, 300].map((delay) => (
-                    <span
-                      key={delay}
-                      className="w-2 h-2 bg-[#F5A623] rounded-full animate-bounce"
-                      style={{ animationDelay: `${delay}ms` }}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-            <img
-              src={src}
-              alt={`Enactus FUTO slide ${i + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
-                imagesLoaded[i] ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          </div>
-        ))}
-
-        <div className="absolute inset-0 bg-black/50 z-10" />
-
-        <div className="relative z-20 h-full flex items-end pb-16 md:pb-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-                Creating Positive Change{" "}
-                <span className="text-[#F5A623]">
-                  Through Entrepreneurial Action
-                </span>
-              </h1>
-              <p className="text-white/80 text-sm sm:text-base mb-8 leading-relaxed max-w-lg">
-                We're a community of student leaders committed to using business
-                principles to create sustainable social impact in Futo Owerri
-                and beyond.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/team"
-                  className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
-                >
-                  Join Our Team <ArrowRight size={16} />
-                </Link>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#1B1464] transition-colors duration-200"
-                >
-                  View Our Projects
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-6 right-6 z-20 flex gap-2">
-          {heroImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === currentSlide
-                  ? "bg-[#F5A623] w-6"
-                  : "bg-white/50 w-2 hover:bg-white/80"
-              }`}
-            />
-          ))}
-        </div>
+        <Hero />
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -199,18 +101,18 @@ const About = () => {
           >
             {/* Icon */}
             <div className="flex justify-center mb-5">
-              <div className="w-12 h-12 bg-[#F5A623]/10 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 md:w-20 md:h-20 bg-[#F5A623]/10 rounded-full flex items-center justify-center">
                 <img src={Icon} alt="" className="w-6 h-6 object-contain" />
               </div>
             </div>
 
             {/* Title */}
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1B1464] mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3">
               {item.title}
             </h2>
 
             {/* Content */}
-            <p className="text-gray-500 text-sm sm:text-base leading-relaxed whitespace-pre-line max-w-md mx-auto">
+            <p className="text-gray-500 text-sm md:text-lg leading-relaxed whitespace-pre-line max-w-md mx-auto">
               {item.content}
             </p>
           </div>
@@ -219,7 +121,7 @@ const About = () => {
 
       {/*  OUR CORE VALUES SECTION */}
       <section className="bg-[#1e1b4b] py-16 px-6 rounded-[20px] max-w-6xl mx-auto mb-16">
-        <h2 className="text-white text-center text-xl font-bold mb-12">
+        <h2 className="text-white text-center text-2xl md:text-3xl font-bold mb-12">
           Our Core Values
         </h2>
         <div className="max-w-xl mx-auto space-y-6">
@@ -238,8 +140,8 @@ const About = () => {
                   val.pos === "right" ? "text-left pr-12" : "text-left"
                 }
               >
-                <h4 className="text-white font-bold text-lg">{val.title}</h4>
-                <p className="text-white/60 text-xs mt-1 leading-snug">
+                <h4 className="text-white font-bold text-xl md:text-2xl">{val.title}</h4>
+                <p className="text-white/60 text-sm md:text-lg mt-1 leading-snug">
                   {val.desc}
                 </p>
               </div>
@@ -257,7 +159,7 @@ const About = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
-          <h2 className="text-[#1e1b4b] text-xl sm:text-2xl font-bold mb-8">
+          <h2 className="text-[#1e1b4b] text-3xl md:text-4xl font-bold mb-8">
             Our Achievements
           </h2>
 
@@ -269,33 +171,17 @@ const About = () => {
                 className="min-w-55 sm:min-w-65 md:min-w-70 border border-gray-100 rounded-3xl p-6 sm:p-8 text-center snap-start shadow-sm flex flex-col items-center bg-white hover:shadow-md transition-all duration-300"
               >
                 {/* Icon */}
-                <div className="text-[#1B1464] mb-5">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                    <path d="M4 22h16" />
-                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                  </svg>
-                </div>
+                  <div className={`p-4 rounded-full ${ach.bg}`}>
+        <ach.icon className={`w-5 h-5 md:w-8 md:h-8 ${ach.color}`} />
+      </div>
 
                 {/* Title */}
-                <h4 className="text-[#1e1b4b] font-semibold text-sm sm:text-base leading-tight mb-2">
+                <h4 className="text-[#1e1b4b] font-semibold text-lg md:text-xl leading-tight mb-2">
                   {ach.title}
                 </h4>
 
                 {/* Subtitle */}
-                <p className="text-gray-400 text-xs sm:text-sm">
+                <p className="text-gray-400 text-sm  md:text-lg">
                   {ach.subtitle}
                 </p>
               </div>
@@ -342,7 +228,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
             >
-              Visit Enactus
+             Join Group
             </a>
           </div>
         </div>

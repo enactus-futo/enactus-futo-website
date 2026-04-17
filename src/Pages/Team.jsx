@@ -159,7 +159,7 @@ const Team = () => {
             }`}
           >
             {!imagesLoaded[i] && (
-              <div className="absolute inset-0 bg-[#1B1464] flex flex-col items-center justify-center z-10 gap-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-4">
                 <img
                   src={Logo}
                   alt="Loading..."
@@ -192,26 +192,22 @@ const Team = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-                Creating Positive Change{" "}
-                <span className="text-[#F5A623]">
-                  Through Entrepreneurial Action
-                </span>
+                Meet The Enactus FUTO Team
+               
               </h1>
               <p className="text-white/80 text-sm sm:text-base mb-8 leading-relaxed max-w-lg">
-                We're a community of student leaders committed to using business
-                principles to create sustainable social impact in Futo Owerri
-                and beyond.
+               Whether you want to join our team, partner with us, or just say hello, we'd love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link
+                {/* <Link
                   to="/team"
                   className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
                 >
                   Join Our Team <ArrowRight size={16} />
-                </Link>
+                </Link> */}
                 <Link
                   to="/projects"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#1B1464] transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-[#1B1464] transition-colors duration-200"
                 >
                   View Our Projects
                 </Link>

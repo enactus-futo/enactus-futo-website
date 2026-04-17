@@ -10,3 +10,16 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+@media (max-width: 767px) {
+  .stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Cards will be flush */
+  }
+
+  .stack-card {
+    position: sticky;
+   
+    padding-top: 20px; 
+  }
+}

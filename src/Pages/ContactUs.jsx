@@ -57,7 +57,7 @@ const ContactUs = () => {
             }`}
           >
             {!imagesLoaded[i] && (
-              <div className="absolute inset-0 bg-[#1B1464] flex flex-col items-center justify-center z-10 gap-4">
+              <div className="absolute inset-0  flex flex-col items-center justify-center z-10 gap-4">
                 <img
                   src={logo}
                   alt="Loading..."
@@ -101,7 +101,7 @@ const ContactUs = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/team"
-                  className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
+                  className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-semibold px-6 py-3 rounded-lg hover:bg-[#e09415] transition-colors duration-200"
                 >
                   Join Our Team <ArrowRight size={16} />
                 </Link>

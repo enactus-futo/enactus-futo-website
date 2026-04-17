@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div className="flex flex-col gap-4 ">
-            <Link to="/" className="flex items-center gap-2 w-fit">
+            <Link to="/" className="flex items-center w-35 h-20 gap-2 ">
               <img src={Logo} alt="Enactus Logo" />
             </Link>
             <p className="text-gray-500 text-sm  md:text-lg leading-relaxed max-w-xs  ">
