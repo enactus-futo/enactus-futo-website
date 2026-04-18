@@ -2,15 +2,14 @@ import React from 'react'
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import Picture1 from "../assets/pics1.png";
-import Picture2 from "../assets/pics2.png";
-import Picture3 from "../assets/pics3.png";
+import Picture1 from "../assets/pics1.jpeg";
+import Picture2 from "../assets/pics2.jpeg";
+import Picture3 from "../assets/pics3.jpeg";
+import Picture4 from "../assets/pics4.jpeg";
+import Picture5 from "../assets/pics5.jpeg";
 import logo from "../assets/logo.png";
 
-const heroImages = [Picture1, Picture2, Picture3];
-
-
-
+const heroImages = [Picture1, Picture2, Picture3, Picture4, Picture5];
 
 const Hero = () => {
       const [currentSlide, setCurrentSlide] = useState(0);

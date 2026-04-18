@@ -3,17 +3,19 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import Picture1 from "../assets/pics1.png";
-import Picture2 from "../assets/pics2.png";
-import Picture3 from "../assets/pics3.png";
+import Picture1 from "../assets/pics1.jpeg";
+import Picture2 from "../assets/pics2.jpeg";
+import Picture3 from "../assets/pics3.jpeg";
+import Picture4 from "../assets/pics4.jpeg";
+import Picture5 from "../assets/pics5.jpeg";
 import nmeso from "../assets/nmeso.jpg";
 import Logo from "../assets/logo.png";
-import GlobalImage from "../assets/pics1.png";
+
 import GallerySection from "../component/Gallery";
 import ExecutivesSection from "../component/executiveCard";
 import FacultyAdvisor from "../component/FacultyAdvisor";
 
-const heroImages = [Picture1, Picture2, Picture3];
+const heroImages = [Picture1, Picture2, Picture3, Picture4, Picture5];
 
 // const executives = [
 //   {
@@ -255,7 +257,7 @@ const Team = () => {
           {/* Image */}
           <div className="rounded-2xl overflow-hidden mb-6">
             <img
-              src={GlobalImage}
+              src={Picture5}
               alt="Enactus global movement"
               className="w-full h-48 sm:h-56 md:h-64 object-cover"
             />

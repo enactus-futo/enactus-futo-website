@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import Picture1 from "../assets/pics1.png";
+import Picture1 from "../assets/pics1.jpeg";
 import { Trophy, Medal, Award } from "lucide-react";
 
 import Icon from "../assets/MissionIcon.png";
 
 import { Frown } from "lucide-react";
 import Hero from "../component/hero";
-import GlobalImage from "../assets/pics1.png";
+
 
 
 
@@ -201,7 +201,7 @@ const achievements = [
           {/* Image */}
           <div className="rounded-2xl overflow-hidden mb-6">
             <img
-              src={GlobalImage}
+              src={Picture1}
               alt="Enactus global movement"
               className="w-full h-48 sm:h-56 md:h-64 object-cover"
             />

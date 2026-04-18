@@ -1,15 +1,17 @@
 import { useState } from "react";
 import nmeso from "../assets/nmeso.jpg";
+import pm from "../assets/pm.png";
+import smo from "../assets/smo.jpeg";
 
 
 
 const executives = [
   { id: 1, name: " Ebere Ndukwu", position: "Team Leader", image: nmeso, isLeader: true },
-  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: nmeso },
+  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: pm },
   { id: 3, name: "Praise Godwin", position: "Human Resource", image: nmeso },
   { id: 4, name: "Nmesoma Nnopu", position: "Team Secretary", image: nmeso },
   { id: 5, name: "Munachi Anyanwu", position: "Financial Director", image: nmeso },
-  { id: 6, name: "Chiamaka Obasi", position: "Social Media Officer", image: nmeso },
+  { id: 6, name: "Chiamaka Obasi", position: "Social Media Officer", image: smo },
   { id: 7, name: "Kingsley Okoronkwo", position: "Technical Director", image: nmeso },
 ];
 
