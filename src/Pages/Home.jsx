@@ -172,7 +172,7 @@ const testimonials = [
 
 const Home = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-gray-200">
       {/* hero section */}
 
       <section
@@ -184,7 +184,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full bg-white py-12 md:py-16">
+      <section className="w-full  py-12 md:py-16">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 ">
             {stats.map((stat) => (
@@ -415,8 +415,12 @@ const Home = () => {
 
             {/* The Button - Matches Figma's gold and rounded style */}
             <button className="bg-[#FFB800] hover:bg-[#e6a600] text-[#1e1b4b] font-bold py-4 px-8 rounded-2xl flex items-center gap-2 mx-auto transition-transform active:scale-95">
+              <Link to="/team" >
               Get Involved
-              <span className="text-xl">→</span>
+               <span className="text-xl">→</span>
+              </Link>
+              
+             
             </button>
           </div>
         </div>

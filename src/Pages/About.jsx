@@ -73,7 +73,7 @@ const achievements = [
   },
 ];
   return (
-    <div className="w-full">
+    <div className="w-full bg-gray-100">
       {/* hero section */}
       <section
         className="relative w-full overflow-hidden"
@@ -223,7 +223,7 @@ const achievements = [
           {/* Button */}
           <div className="flex justify-end">
             <a
-              href="https://enactus.org"
+              href="https://chat.whatsapp.com/KnmxtlVli2F34b6RiCSjFL?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"

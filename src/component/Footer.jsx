@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 import Logo from "../assets/logo.png";
 
@@ -21,18 +21,23 @@ const navLinks = [
 const socials = [
   {
     icon: FaFacebook,
-    href: "https://facebook.com/enactusfuto",
+    href: "https://web.facebook.com/enactus.futo.5",
     label: "Facebook",
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/company/enactusfuto",
+    href: "https://ng.linkedin.com/company/official-enactus-futo",
     label: "LinkedIn",
   },
   {
     icon: FaXTwitter,
-    href: "https://twitter.com/enactusfuto",
+    href: "https://x.com/Enactus_FUTO",
     label: "Twitter",
+  },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/official_enactusfuto/",
+    label: "Instagram",
   },
   { icon: Mail, href: "mailto:futoenactus@gmail.com", label: "Gmail" },
 ];
