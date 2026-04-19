@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import nmeso from "../assets/nmeso.jpg";
+import fa from "../assets/executive/fa.jpeg";
 
 
 const FacultyAdvisor = () => {
   const [imgError, setImgError] = useState(false);
  
-  const photo = nmeso; 
+  const photo = fa; 
 
   return (
     <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50">

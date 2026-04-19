@@ -8,7 +8,7 @@ import Picture2 from "../assets/pics2.jpeg";
 import Picture3 from "../assets/pics3.jpeg";
 import Picture4 from "../assets/pics4.jpeg";
 import Picture5 from "../assets/pics5.jpeg";
-import nmeso from "../assets/nmeso.jpg";
+
 import Logo from "../assets/logo.png";
 
 import GallerySection from "../component/Gallery";

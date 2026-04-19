@@ -1,18 +1,22 @@
 import { useState } from "react";
-import nmeso from "../assets/nmeso.jpg";
-import pm from "../assets/pm.png";
-import smo from "../assets/smo.jpeg";
+import tl from "../assets/executive/tl.png";
+
+import smo from "../assets/executive/smo.jpeg";
+import fd from "../assets/executive/fd.jpeg";
+import td from "../assets/executive/td.jpeg";
+import sec from "../assets/executive/sec.jpg";
+
 
 
 
 const executives = [
-  { id: 1, name: " Ebere Ndukwu", position: "Team Leader", image: nmeso, isLeader: true },
-  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: pm },
-  { id: 3, name: "Praise Godwin", position: "Human Resource", image: nmeso },
-  { id: 4, name: "Nmesoma Nnopu", position: "Team Secretary", image: nmeso },
-  { id: 5, name: "Munachi Anyanwu", position: "Financial Director", image: nmeso },
+  { id: 1, name: " Ebere Ndukwu", position: "Team Leader", image: tl, isLeader: true },
+  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: tl},
+  { id: 3, name: "Praise Godwin", position: "Human Resource", image: sec },
+  { id: 4, name: "Nmesoma Nnopu", position: "Team Secretary", image: sec },
+  { id: 5, name: "Munachi Anyanwu", position: "Financial Director", image: fd },
   { id: 6, name: "Chiamaka Obasi", position: "Social Media Officer", image: smo },
-  { id: 7, name: "Kingsley Okoronkwo", position: "Technical Director", image: nmeso },
+  { id: 7, name: "Kingsley Okoronkwo", position: "Technical Director", image: td },
 ];
 
 const getInitials = (name) =>

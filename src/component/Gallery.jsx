@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-import Picture1 from "../assets/pics1.jpeg";
-import Picture2 from "../assets/pics2.jpeg";
-import Picture3 from "../assets/pics3.jpeg";
-import Picture4 from "../assets/pics4.jpeg";
-import Picture5 from "../assets/pics5.jpeg";
+import Picture1 from "../assets/gallery/pics1.jpeg";
+import Picture2 from "../assets/gallery/pics2.jpeg";
+import Picture3 from "../assets/gallery/pics3.jpeg";
+import Picture4 from "../assets/gallery/pics4.jpeg";
+import Picture5 from "../assets/gallery/pics5.jpeg";
+
 
 // Replace with your actual Enactus FUTO images
 // import Img1 from "../assets/gallery/img1.jpg";
@@ -21,24 +22,24 @@ const galleryItems = [
   {
     id: 2,
     src: Picture2,
-    caption: "Project Workshop",
+    caption: "ACT Foundation award",
     span: "col-span-1 row-span-1",
   },
   {
     id: 3,
     src: Picture3,
-    caption: "Community Outreach",
+    caption: "Nationals Presentation",
     span: "col-span-1 row-span-1",
   },
   {
     id: 4,
-    src: Picture1,
-    caption: "Award Ceremony",
+    src: Picture4,
+    caption: "Schneider Electric Challenge winner",
     span: "col-span-1 row-span-2",
   },
   {
     id: 5,
-    src: Picture2,
+    src: Picture5,
     caption: "Enactus Summit",
     span: "col-span-2 row-span-1",
   },
