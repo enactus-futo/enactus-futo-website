@@ -8,6 +8,7 @@ import Icon from "../assets/MissionIcon.png";
 
 import { Frown } from "lucide-react";
 import Hero from "../component/hero";
+import SEO from "../component/SEO.jsx";
 
 const About = () => {
   // core values data
@@ -69,192 +70,201 @@ const About = () => {
     },
   ];
   return (
-    <div className="w-full bg-gray-100">
-      {/* hero section */}
-      <section
-        className="relative w-full overflow-hidden"
-        style={{ height: "100dvh" }}
-      >
-        <Hero
-          tag="Who We Are"
-          headline="Driven by Purpose"
-          highlight="Powered by People"
-          subtext="Enactus FUTO is part of a global network of students and leaders using entrepreneurial action to transform lives."
-        />
-      </section>
-
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {[
-          {
-            title: "Our Mission",
-            content:
-              "To enable progress through entrepreneurial action by empowering students to create community impact that improves quality of life and standard of living for people in need.\n\nWe develop the next generation of entrepreneurial leaders and social innovators through action-based learning and real-world project experience.",
-            accent: "#F5A623",
-          },
-          {
-            title: "Our Vision",
-            content:
-              "A world where students harness the power of entrepreneurial action to transform lives and shape a better, more sustainable future.\n\nThrough our projects and initiatives, we strive to create lasting positive change in FUTO and contribute to the global Enactus movement's impact.",
-
-            accent: "#1B1464",
-          },
-        ].map((item, idx) => (
-          <div
-            key={idx}
-            className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
-          >
-            {/* Icon */}
-            <div className="flex justify-center mb-5">
-              <div className="w-12 h-12 md:w-20 md:h-20 bg-[#F5A623]/10 rounded-full flex items-center justify-center">
-                <img src={Icon} alt="" className="w-6 h-6 object-contain" />
-              </div>
-            </div>
-
-            {/* Title */}
-            <h2
-              className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3"
-              style={{ fontFamily: "'Syne', sans-serif" }}
-            >
-              {item.title}
-            </h2>
-
-            {/* Content */}
-            <p
-              className="text-gray-500 text-sm md:text-lg leading-relaxed whitespace-pre-line max-w-md mx-auto"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              {item.content}
-            </p>
-          </div>
-        ))}
-      </section>
-
-      {/*  OUR CORE VALUES SECTION */}
-      <section className="bg-[#1e1b4b] py-16 px-6 rounded-[20px] max-w-6xl mx-auto mb-16">
-        <p
-          className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.25em] text-center mb-3"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
+    <>
+      <SEO
+        title="About Us"
+        description="Learn about Enactus FUTO — our mission, vision, core values, and the story behind our student-led social impact organization at FUTO."
+        url="https://enactusfuto.org/about"
+      />
+      <div className="w-full bg-gray-100">
+        {/* hero section */}
+        <section
+          className="relative w-full overflow-hidden"
+          style={{ height: "100dvh" }}
         >
-          What We Stand For
-        </p>
-        <h2
-          className="text-white text-center text-2xl md:text-4xl font-bold mb-14"
-          style={{ fontFamily: "'Syne', sans-serif" }}
-        >
-          Our Core Values
-        </h2>
-        <div className="max-w-xl mx-auto space-y-6">
-          {coreValues.map((val) => (
+          <Hero
+            tag="Who We Are"
+            headline="Driven by Purpose"
+            highlight="Powered by People"
+            subtext="Enactus FUTO is part of a global network of students and leaders using entrepreneurial action to transform lives."
+          />
+        </section>
+
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {[
+            {
+              title: "Our Mission",
+              content:
+                "To enable progress through entrepreneurial action by empowering students to create community impact that improves quality of life and standard of living for people in need.\n\nWe develop the next generation of entrepreneurial leaders and social innovators through action-based learning and real-world project experience.",
+              accent: "#F5A623",
+            },
+            {
+              title: "Our Vision",
+              content:
+                "A world where students harness the power of entrepreneurial action to transform lives and shape a better, more sustainable future.\n\nThrough our projects and initiatives, we strive to create lasting positive change in FUTO and contribute to the global Enactus movement's impact.",
+
+              accent: "#1B1464",
+            },
+          ].map((item, idx) => (
             <div
-              key={val.id}
-              className="relative border border-white/20 rounded-2xl p-6 flex items-center gap-4"
+              key={idx}
+              className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              {val.pos === "left" && (
-                <div className="w-10 h-10 bg-yellow-500 rounded-full shrink-0 flex items-center justify-center text-[#1e1b4b] font-bold">
-                  {val.number}
+              {/* Icon */}
+              <div className="flex justify-center mb-5">
+                <div className="w-12 h-12 md:w-20 md:h-20 bg-[#F5A623]/10 rounded-full flex items-center justify-center">
+                  <img src={Icon} alt="" className="w-6 h-6 object-contain" />
                 </div>
-              )}
-              <div
-                className={
-                  val.pos === "right" ? "text-left pr-12" : "text-left"
-                }
-              >
-                <h4 className="text-white font-bold text-xl md:text-2xl">
-                  {val.title}
-                </h4>
-                <p className="text-white/60 text-sm md:text-lg mt-1 leading-snug">
-                  {val.desc}
-                </p>
               </div>
-              {val.pos === "right" && (
-                <div className="absolute right-6 w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-[#1e1b4b] font-bold">
-                  {val.number}
-                </div>
-              )}
+
+              {/* Title */}
+              <h2
+                className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3"
+                style={{ fontFamily: "'Syne', sans-serif" }}
+              >
+                {item.title}
+              </h2>
+
+              {/* Content */}
+              <p
+                className="text-gray-500 text-sm md:text-lg leading-relaxed whitespace-pre-line max-w-md mx-auto"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                {item.content}
+              </p>
             </div>
           ))}
-        </div>
-      </section>
+        </section>
 
-      {/*  OUR ACHIEVEMENTS SECTION (Horizontal Scroll) */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          {/* Heading */}
-          <h2 className="text-[#1e1b4b] text-3xl md:text-4xl font-bold mb-8">
-            Our Achievements
+        {/*  OUR CORE VALUES SECTION */}
+        <section className="bg-[#1e1b4b] py-16 px-6 rounded-[20px] max-w-6xl mx-auto mb-16">
+          <p
+            className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.25em] text-center mb-3"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            What We Stand For
+          </p>
+          <h2
+            className="text-white text-center text-2xl md:text-4xl font-bold mb-14"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Our Core Values
           </h2>
-
-          {/* Scroll Container */}
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
-            {achievements.map((ach) => (
+          <div className="max-w-xl mx-auto space-y-6">
+            {coreValues.map((val) => (
               <div
-                key={ach.id}
-                className="min-w-55 sm:min-w-65 md:min-w-70 border border-gray-100 rounded-3xl p-6 sm:p-8 text-center snap-start shadow-sm flex flex-col items-center bg-white hover:shadow-md transition-all duration-300"
+                key={val.id}
+                className="relative border border-white/20 rounded-2xl p-6 flex items-center gap-4"
               >
-                {/* Icon */}
-                <div className={`p-4 rounded-full ${ach.bg}`}>
-                  <ach.icon className={`w-5 h-5 md:w-8 md:h-8 ${ach.color}`} />
+                {val.pos === "left" && (
+                  <div className="w-10 h-10 bg-yellow-500 rounded-full shrink-0 flex items-center justify-center text-[#1e1b4b] font-bold">
+                    {val.number}
+                  </div>
+                )}
+                <div
+                  className={
+                    val.pos === "right" ? "text-left pr-12" : "text-left"
+                  }
+                >
+                  <h4 className="text-white font-bold text-xl md:text-2xl">
+                    {val.title}
+                  </h4>
+                  <p className="text-white/60 text-sm md:text-lg mt-1 leading-snug">
+                    {val.desc}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <h4 className="text-[#1e1b4b] font-semibold text-lg md:text-xl leading-tight mb-2">
-                  {ach.title}
-                </h4>
-
-                {/* Subtitle */}
-                <p className="text-gray-400 text-sm  md:text-lg">
-                  {ach.subtitle}
-                </p>
+                {val.pos === "right" && (
+                  <div className="absolute right-6 w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-[#1e1b4b] font-bold">
+                    {val.number}
+                  </div>
+                )}
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Be Part of a Global Movement */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="w-full bg-[#1e1b4b] rounded-[20px] overflow-hidden p-6 sm:p-8 shadow-xl">
-          {/* Title */}
-          <h2 className="text-white text-center text-2xl sm:text-3xl font-bold mb-6">
-            Be Part of a Global Movement
-          </h2>
+        {/*  OUR ACHIEVEMENTS SECTION (Horizontal Scroll) */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            {/* Heading */}
+            <h2 className="text-[#1e1b4b] text-3xl md:text-4xl font-bold mb-8">
+              Our Achievements
+            </h2>
 
-          {/* Image */}
-          <div className="rounded-2xl overflow-hidden mb-6">
-            <img
-              src={Picture1}
-              alt="Enactus global movement"
-              className="w-full h-48 sm:h-56 md:h-64 object-cover"
-            />
+            {/* Scroll Container */}
+            <div className="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
+              {achievements.map((ach) => (
+                <div
+                  key={ach.id}
+                  className="min-w-55 sm:min-w-65 md:min-w-70 border border-gray-100 rounded-3xl p-6 sm:p-8 text-center snap-start shadow-sm flex flex-col items-center bg-white hover:shadow-md transition-all duration-300"
+                >
+                  {/* Icon */}
+                  <div className={`p-4 rounded-full ${ach.bg}`}>
+                    <ach.icon
+                      className={`w-5 h-5 md:w-8 md:h-8 ${ach.color}`}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h4 className="text-[#1e1b4b] font-semibold text-lg md:text-xl leading-tight mb-2">
+                    {ach.title}
+                  </h4>
+
+                  {/* Subtitle */}
+                  <p className="text-gray-400 text-sm  md:text-lg">
+                    {ach.subtitle}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          {/* Text */}
-          <div className="space-y-4 text-center mb-8 max-w-2xl mx-auto">
-            <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-              Enactus is a global community present in 35 countries, with over
-              72,000 students on more than 350 university campuses.
-            </p>
-            <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-              As Enactus FUTO, we're proud to contribute to this worldwide
-              network dedicated to using entrepreneurial action to improve lives
-              and create a better, more sustainable world.
-            </p>
-          </div>
+        {/* Be Part of a Global Movement */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          <div className="w-full bg-[#1e1b4b] rounded-[20px] overflow-hidden p-6 sm:p-8 shadow-xl">
+            {/* Title */}
+            <h2 className="text-white text-center text-2xl sm:text-3xl font-bold mb-6">
+              Be Part of a Global Movement
+            </h2>
 
-          {/* Button */}
-          <div className="flex justify-end">
-            <a
-              href="https://chat.whatsapp.com/KnmxtlVli2F34b6RiCSjFL?mode=gi_t"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
-            >
-              Join Group
-            </a>
+            {/* Image */}
+            <div className="rounded-2xl overflow-hidden mb-6">
+              <img
+                src={Picture1}
+                alt="Enactus global movement"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="space-y-4 text-center mb-8 max-w-2xl mx-auto">
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                Enactus is a global community present in 35 countries, with over
+                72,000 students on more than 350 university campuses.
+              </p>
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                As Enactus FUTO, we're proud to contribute to this worldwide
+                network dedicated to using entrepreneurial action to improve
+                lives and create a better, more sustainable world.
+              </p>
+            </div>
+
+            {/* Button */}
+            <div className="flex justify-end">
+              <a
+                href="https://chat.whatsapp.com/KnmxtlVli2F34b6RiCSjFL?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
+              >
+                Join Group
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

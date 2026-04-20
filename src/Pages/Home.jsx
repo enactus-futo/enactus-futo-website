@@ -14,6 +14,7 @@ import logo from "../assets/logo.png";
 import EcoFuel from "../assets/ecofuel.png";
 import RunAm from "../assets/runam.png";
 import Hero from "../component/hero";
+import SEO from "../component/SEO.jsx";
 
 import Praise from "../assets/praise.png";
 
@@ -99,7 +100,7 @@ const projects = [
     description:
       "Uniclear is a clearance studio designed specifically for students and universities, providing structured solutions for decluttering, item clearance, and sustainable disposal of unwanted belongings in campus environments.",
     metric: "500 students reached",
-    image: "Ecofuel",
+    image: RunAm,
     badgeColor: "bg-blue-400",
   },
 ];
@@ -167,6 +168,13 @@ const testimonials = [
 
 const Home = () => {
   return (
+    <>
+      <SEO
+      title="Home"
+      description="Enactus FUTO ,empowering students at Federal University of Technology Owerri to create positive change through entrepreneurial action."
+      keywords="Enactus FUTO, FUTO student organizations, FUTO clubs, Federal University Technology Owerri, Enactus Nigeria, student entrepreneurship FUTO Owerri"
+      url="https://enactusfuto.org"
+    />
     <div className="w-full bg-[#FFF8EE]">
       {/* hero section */}
 
@@ -444,6 +452,8 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 
