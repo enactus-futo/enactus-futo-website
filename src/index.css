@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* Optional global defaults */
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Syne', sans-serif;
+}
 
 /* Hide scrollbar for Chrome, Safari and Edge */
 .no-scrollbar::-webkit-scrollbar {
@@ -20,8 +30,15 @@
   .stack-card {
     position: sticky;
    
-    padding-top: 20px; 
+    
   }
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Syne', sans-serif;
 }
 
 @keyframes bounce-in {

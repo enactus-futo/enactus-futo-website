@@ -3,7 +3,7 @@ import Home from "../Pages/home";
 import About from "../Pages/about";
 import ContactUs from "../Pages/contactUs";
 import Team from "../Pages/team";
-import Projects from "../Pages/projects";
+
 
 import ScrollToTop from "../component/ScrollToTop";
 import  SharedLayOut  from "../component/layOut/SharedLayOut";
@@ -33,10 +33,7 @@ export function Routes() {
           element: <Team/>,
         },
        
-        {
-          path: "projects",
-          element: <Projects/>,
-        },
+        
       ],
     },
   ];

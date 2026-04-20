@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Team", to: "/team" },
-  { label: "Projects", to: "/projects" },
+ 
   { label: "Contact Us", to: "/contact" },
 ];
 
@@ -95,7 +95,7 @@ const Header = () => {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="bg-white border  border-black/10 px-4  py-4 mx-4 mb-4 rounded-2xl flex flex-col gap-4 text-center ">
+        <nav className="bg-white/90 border  border-black/10 px-4  py-4 mx-4 mb-4 rounded-2xl flex flex-col gap-4 text-center ">
           {navLinks.map(({ label, to }) => (
             <NavLink
               key={to}

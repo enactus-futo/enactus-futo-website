@@ -9,11 +9,7 @@ import Icon from "../assets/MissionIcon.png";
 import { Frown } from "lucide-react";
 import Hero from "../component/hero";
 
-
-
-
 const About = () => {
-
   // core values data
   const coreValues = [
     {
@@ -46,32 +42,32 @@ const About = () => {
     },
   ];
 
-const achievements = [
-  {
-    id: 1,
-    title: "2nd Runner Up National Finale 2025",
-    subtitle: "Competed at the Enactus Nigeria National Competition",
-    icon: Medal,
-    color: "text-gray-500",
-    bg: "bg-gray-100",
-  },
-  {
-    id: 2,
-    title: "Schneider Champions 2024",
-    subtitle: "Recognized for outstanding first-year performance",
-    icon: Trophy,
-    color: "text-yellow-500",
-    bg: "bg-yellow-100",
-  },
-  {
-    id: 3,
-    title: "Action for Impact Award",
-    subtitle: "Awarded for community development excellence",
-    icon: Award,
-    color: "text-green-500",
-    bg: "bg-green-100",
-  },
-];
+  const achievements = [
+    {
+      id: 1,
+      title: "2nd Runner Up National Finale 2025",
+      subtitle: "Competed at the Enactus Nigeria National Competition",
+      icon: Medal,
+      color: "text-gray-500",
+      bg: "bg-gray-100",
+    },
+    {
+      id: 2,
+      title: "Schneider Champions 2024",
+      subtitle: "Recognized for outstanding first-year performance",
+      icon: Trophy,
+      color: "text-yellow-500",
+      bg: "bg-yellow-100",
+    },
+    {
+      id: 3,
+      title: "Action for Impact Award",
+      subtitle: "Awarded for community development excellence",
+      icon: Award,
+      color: "text-green-500",
+      bg: "bg-green-100",
+    },
+  ];
   return (
     <div className="w-full bg-gray-100">
       {/* hero section */}
@@ -79,7 +75,12 @@ const achievements = [
         className="relative w-full overflow-hidden"
         style={{ height: "100dvh" }}
       >
-        <Hero />
+        <Hero
+          tag="Who We Are"
+          headline="Driven by Purpose"
+          highlight="Powered by People"
+          subtext="Enactus FUTO is part of a global network of students and leaders using entrepreneurial action to transform lives."
+        />
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -88,11 +89,14 @@ const achievements = [
             title: "Our Mission",
             content:
               "To enable progress through entrepreneurial action by empowering students to create community impact that improves quality of life and standard of living for people in need.\n\nWe develop the next generation of entrepreneurial leaders and social innovators through action-based learning and real-world project experience.",
+            accent: "#F5A623",
           },
           {
             title: "Our Vision",
             content:
               "A world where students harness the power of entrepreneurial action to transform lives and shape a better, more sustainable future.\n\nThrough our projects and initiatives, we strive to create lasting positive change in FUTO and contribute to the global Enactus movement's impact.",
+
+            accent: "#1B1464",
           },
         ].map((item, idx) => (
           <div
@@ -107,12 +111,18 @@ const achievements = [
             </div>
 
             {/* Title */}
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3">
+            <h2
+              className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
               {item.title}
             </h2>
 
             {/* Content */}
-            <p className="text-gray-500 text-sm md:text-lg leading-relaxed whitespace-pre-line max-w-md mx-auto">
+            <p
+              className="text-gray-500 text-sm md:text-lg leading-relaxed whitespace-pre-line max-w-md mx-auto"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
               {item.content}
             </p>
           </div>
@@ -121,7 +131,16 @@ const achievements = [
 
       {/*  OUR CORE VALUES SECTION */}
       <section className="bg-[#1e1b4b] py-16 px-6 rounded-[20px] max-w-6xl mx-auto mb-16">
-        <h2 className="text-white text-center text-2xl md:text-3xl font-bold mb-12">
+        <p
+          className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.25em] text-center mb-3"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+        >
+          What We Stand For
+        </p>
+        <h2
+          className="text-white text-center text-2xl md:text-4xl font-bold mb-14"
+          style={{ fontFamily: "'Syne', sans-serif" }}
+        >
           Our Core Values
         </h2>
         <div className="max-w-xl mx-auto space-y-6">
@@ -140,7 +159,9 @@ const achievements = [
                   val.pos === "right" ? "text-left pr-12" : "text-left"
                 }
               >
-                <h4 className="text-white font-bold text-xl md:text-2xl">{val.title}</h4>
+                <h4 className="text-white font-bold text-xl md:text-2xl">
+                  {val.title}
+                </h4>
                 <p className="text-white/60 text-sm md:text-lg mt-1 leading-snug">
                   {val.desc}
                 </p>
@@ -171,9 +192,9 @@ const achievements = [
                 className="min-w-55 sm:min-w-65 md:min-w-70 border border-gray-100 rounded-3xl p-6 sm:p-8 text-center snap-start shadow-sm flex flex-col items-center bg-white hover:shadow-md transition-all duration-300"
               >
                 {/* Icon */}
-                  <div className={`p-4 rounded-full ${ach.bg}`}>
-        <ach.icon className={`w-5 h-5 md:w-8 md:h-8 ${ach.color}`} />
-      </div>
+                <div className={`p-4 rounded-full ${ach.bg}`}>
+                  <ach.icon className={`w-5 h-5 md:w-8 md:h-8 ${ach.color}`} />
+                </div>
 
                 {/* Title */}
                 <h4 className="text-[#1e1b4b] font-semibold text-lg md:text-xl leading-tight mb-2">
@@ -228,7 +249,7 @@ const achievements = [
               rel="noopener noreferrer"
               className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
             >
-             Join Group
+              Join Group
             </a>
           </div>
         </div>

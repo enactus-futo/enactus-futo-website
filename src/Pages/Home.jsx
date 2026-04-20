@@ -99,7 +99,7 @@ const projects = [
     description:
       "Uniclear is a clearance studio designed specifically for students and universities, providing structured solutions for decluttering, item clearance, and sustainable disposal of unwanted belongings in campus environments.",
     metric: "500 students reached",
-    image: "https://via.placeholder.com/400x300?text=Project+3",
+    image: "Ecofuel",
     badgeColor: "bg-blue-400",
   },
 ];
@@ -111,26 +111,21 @@ const events = [
     date: "Anticipate...",
     title: "Enactus Week 2026",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A week of celebration of innovation, leadership, and impact—bringing students together through projects, outreach, and activities focused on creating sustainable change in our community.",
   },
   {
     id: 2,
-    date: "FAnticipate...",
+    date: "Anticipate...",
     title: "Enactus National Competition",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Representing our institution at the Enactus National Competition, where our projects were showcased on a national stage, demonstrating real impact and sustainable solutions.",
   },
   {
     id: 3,
-    date: "March 20, 2026",
-    title: "Social Innovation Hub",
-    description: "Learning the ropes of social business and impact assessment.",
-  },
-  {
-    id: 4,
-    date: "March 20, 2026",
-    title: "Social Innovation Hub",
-    description: "Learning the ropes of social business and impact assessment.",
+    date: "Anticipate",
+    title: "Clean Up drive",
+    description:
+      "A community driven environmental initiative focused on promoting cleanliness, sustainability, and awareness through active participation and responsible waste management.",
   },
 ];
 
@@ -172,7 +167,7 @@ const testimonials = [
 
 const Home = () => {
   return (
-    <div className="w-full bg-gray-200">
+    <div className="w-full bg-[#FFF8EE]">
       {/* hero section */}
 
       <section
@@ -180,7 +175,12 @@ const Home = () => {
         style={{ height: "100dvh" }}
       >
         {" "}
-        <Hero />
+        <Hero
+          tag="Community Impact"
+          headline="Creating Positive Change"
+          highlight="Through Entrepreneurial Action"
+          subtext="We're a community of student leaders committed to using business principles to create sustainable social impact in FUTO and beyond."
+        />
       </section>
 
       {/* Stats Section */}
@@ -194,14 +194,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* about us */}
-      <section className="w-full bg-yellow-100 py-12 md:py-16">
-        <div className=" mx-auto px-4 md:px-6 lg:px-8">
+      {/* about */}
+      <section className="w-full bg-[#fdf6ec] py-12 md:py-16">
+        <div className="mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1B1464] mb-6">
+            <p
+              className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.3em] mb-3"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Who We Are
+            </p>
+            <h2
+              className="text-3xl md:text-5xl font-extrabold text-[#1B1464] mb-6"
+              style={{ fontFamily: "'Syne', sans-serif" }}
+            >
               About Us
             </h2>
-            <p className="text-gray-600 text-lg md:text-2xl leading-relaxed mb-8">
+            <p
+              className="text-[#4a4a6a] text-lg md:text-xl leading-relaxed mb-8"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
               Enactus FUTO is part of a global network of student, academic, and
               business leaders committed to using the power of entrepreneurial
               action to transform lives and shape a better, more sustainable
@@ -216,7 +228,8 @@ const Home = () => {
             </p>
             <Link
               to="/about"
-              className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-bold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Learn More <ArrowRight size={16} />
             </Link>
@@ -225,95 +238,92 @@ const Home = () => {
       </section>
 
       {/* Our Projects */}
-      <section className="w-full  mx-auto  py-16 px-6 md:px-12 lg:px-24 bg-white font-sans">
-        {/* Header Section */}
-        <div className="mb-3">
-          <div className="flex justify-between items-end mb-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1B1464]">
-              Our Projects
-            </h2>
-            <a
-              href="#"
-              className="text-sm font-medium text-orange-500 hover:underline flex items-center gap-2"
-            >
-              View All Projects <span className="text-lg">→</span>
-            </a>
-          </div>
-          <p className="text-gray-600 text-lg md:text-2xl  mt-4 max-w-2xl leading-relaxed text-center mx-auto">
+      <section className="w-full py-16 px-6 md:px-12 lg:px-24 bg-white">
+        {/* Header — fully centered */}
+        <div className="text-center mb-12">
+          <p className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.25em] mb-3">
+            What We Do
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1B1464] mb-4">
+            Our Projects
+          </h2>
+          <div className="w-12 h-1 bg-[#F5A623] mx-auto mb-6 rounded-full" />
+          <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed mx-auto">
             Explore our Enactus FUTO projects, where ideas are transformed into
             impactful solutions that address real world problems and empower
             communities.
           </p>
         </div>
 
-        {/* Cards Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stack-container">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stack-card">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group cursor-pointer stack-card md:static md:mb-0"
+              className="group cursor-pointer stack-card md:static md:mb-0 flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               style={{
                 top: `calc(80px + ${index * 200}px)`,
                 zIndex: index + 1,
               }}
             >
-              {/* Wrap the inner content in a div with a solid background 
-          to hide the card underneath it properly. 
-      */}
-              <div className="bg-white rounded-2xl overflow-hidden mb-4 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 min-h-150 ">
-                <div>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
+              {/* Image with overlay on hover */}
+              <div className="relative overflow-hidden h-56">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Category badge over image */}
+              </div>
 
-                {/* Content Section */}
-                <div className="space-y-4 p-4 md:p-6 bg-white">
-                  <span
-                    className={`${project.badgeColor} text-white text-xs px-4 py-1 rounded-full font-medium inline-block`}
-                  >
-                    {project.category}
+              {/* Content */}
+              <div className="flex flex-col flex-1 p-6 gap-2">
+                <span
+                  className={`  ${project.badgeColor}  text-white text-xs px-3 py-1 rounded-full font-medium inline-block w-fit`}
+                >
+                  {project.category}
+                </span>
+                <h3 className="text-lg font-bold text-[#1B1464] leading-snug">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">
+                  {project.description}
+                </p>
+
+                {/* Footer */}
+                <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-2">
+                  <span className="text-xs font-semibold text-[#F5A623] uppercase tracking-wide">
+                    {project.metric}
                   </span>
-
-                  <h3 className="text-xl font-bold text-gray-800">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-sm md:text-lg text-gray-500 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex justify-between items-center pt-2">
-                    <span className="text-xs font-semibold text-gray-400 uppercase tracking-tight">
-                      {project.metric}
-                    </span>
-                    <div className="text-gray-400 group-hover:translate-x-1 transition-transform">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
+                  {/* <div className="w-8 h-8 rounded-full bg-[#1B1464]/5 flex items-center justify-center group-hover:bg-[#F5A623] transition-colors duration-300">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-[#1B1464] group-hover:text-white transition-colors duration-300"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </div> */}
                 </div>
               </div>
             </div>
           ))}
         </div>
       </section>
+
       {/* upcoming event */}
       <section className="bg-[#1e1b4b] py-16 px-6 md:px-12 lg:px-24">
         <div className="w-full mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-10">
+          <h2
+            className="text-3xl md:text-5xl font-bold text-white mb-10"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
             Upcoming Events
           </h2>
 
@@ -331,11 +341,17 @@ const Home = () => {
                   {event.date}
                 </span>
 
-                <h3 className="text-2xl font-bold text-[#1e1b4b] mb-4">
+                <h3
+                  className="text-2xl font-bold text-[#1e1b4b] mb-4"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
                   {event.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+                <p
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  className="text-gray-600 leading-relaxed text-sm md:text-lg"
+                >
                   {event.description}
                 </p>
               </div>
@@ -347,14 +363,12 @@ const Home = () => {
       {/* Testimonials */}
       <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl text-center font-bold text-[#1B1464]">
+          <h2
+            style={{ fontFamily: "'Syne', sans-serif" }}
+            className="text-3xl md:text-5xl text-center font-bold text-[#1B1464]"
+          >
             Testimonials
           </h2>
-          <p className="text-gray-600  m-4 text-lg md:text-2xl  leading-relaxed text-center mx-auto">
-            Explore our Enactus FUTO projects, where ideas are transformed into
-            impactful solutions that address real world problems and empower
-            communities.
-          </p>
 
           {/* Grid Layout: 1 col on mobile, 2 cols on desktop */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -404,23 +418,27 @@ const Home = () => {
         <div className="w-full py-16 px-6 md:px-18 lg:px-24 mx-auto">
           {/* The CTA Card */}
           <div className="bg-[#1e1b4b] rounded-[48px] p-12 md:p-24 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+            <h2
+              style={{ fontFamily: "'Syne', sans-serif" }}
+              className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight"
+            >
               Ready to Make an Impact?
             </h2>
 
-            <p className="text-white/90 text-sm md:text-lg max-w-xl mx-auto leading-relaxed mb-12 font-light">
+            <p
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+              className="text-white/90 text-sm md:text-lg max-w-xl mx-auto leading-relaxed mb-12 font-light"
+            >
               Join our team of passionate students working to create positive
               change in our community through entrepreneurial action.
             </p>
 
             {/* The Button - Matches Figma's gold and rounded style */}
             <button className="bg-[#FFB800] hover:bg-[#e6a600] text-[#1e1b4b] font-bold py-4 px-8 rounded-2xl flex items-center gap-2 mx-auto transition-transform active:scale-95">
-              <Link to="/team" >
-              Get Involved
-               <span className="text-xl">→</span>
+              <Link to="/team">
+                Get Involved
+                <span className="text-xl">→</span>
               </Link>
-              
-             
             </button>
           </div>
         </div>
