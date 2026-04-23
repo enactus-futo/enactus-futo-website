@@ -17,6 +17,9 @@ import Hero from "../component/hero";
 import SEO from "../component/SEO.jsx";
 
 import Praise from "../assets/praise.png";
+import testimonials1 from "../assets/testimonial1.jpeg";
+import testimonials2 from "../assets/testimonial2.jpeg";
+
 
 const stats = [
   { target: 50, suffix: "+", label: "Active Members", icon: People },
@@ -134,36 +137,36 @@ const events = [
 const testimonials = [
   {
     id: 1,
-    name: "Praise Godwin",
-    role: "PEOPLE MANAGER, WINICH FARMS.",
+    name: "Mr. Chidum",
+    role: "FOUNDER, CHIDUM TECH.",
     quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: Praise,
+      "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.  My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.  When I look back, I remember that Enactus FUTO was the spring board that set me in motion.",
+    image: testimonials2,
   },
   {
     id: 2,
-    name: "Praise Godwin",
+    name: "Kingsley",
     role: "PEOPLE MANAGER, WINICH FARMS.",
     quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: Praise,
+      "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.  After working with a few failed startups, Enactus showed me the full process - from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels - giving any venture a much stronger chance of succeeding in the market.  My time with Enactus was all about learning what I actually needed to know. I’m proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively.",
+    image: testimonials1,
   },
-  {
-    id: 3,
-    name: "Praise Godwin",
-    role: "PEOPLE MANAGER, WINICH FARMS.",
-    quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: Praise,
-  },
-  {
-    id: 4,
-    name: "Praise Godwin",
-    role: "PEOPLE MANAGER, WINICH FARMS.",
-    quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: Praise,
-  },
+  // {
+  // //   id: 3,
+  // //   name: "Praise Godwin",
+  // //   role: "PEOPLE MANAGER, WINICH FARMS.",
+  // //   quote:
+  // //     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  // //   image: Praise,
+  // // },
+  // // {
+  // //   id: 4,
+  // //   name: "Praise Godwin",
+  // //   role: "PEOPLE MANAGER, WINICH FARMS.",
+  // //   quote:
+  // //     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  // //   image: Praise,
+  // // },
 ];
 
 const Home = () => {

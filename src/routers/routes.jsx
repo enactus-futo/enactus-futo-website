@@ -4,9 +4,9 @@ import About from "../Pages/about";
 import ContactUs from "../Pages/contactUs";
 import Team from "../Pages/team";
 
-
 import ScrollToTop from "../component/ScrollToTop";
-import  SharedLayOut  from "../component/layOut/SharedLayOut";
+import SharedLayOut from "../component/layOut/SharedLayOut";
+import NotFound from "../Pages/NotFound";
 
 export function Routes() {
   const routes = [
@@ -26,18 +26,18 @@ export function Routes() {
         },
         {
           path: "contact",
-          element: <ContactUs/>,
+          element: <ContactUs />,
         },
         {
           path: "team",
-          element: <Team/>,
+          element: <Team />,
         },
-       
-        
+        {
+          path: "*",
+          element: <NotFound />,
+        },
       ],
     },
   ];
   return useRoutes(routes);
 }
-
-

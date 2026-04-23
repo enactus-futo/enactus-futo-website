@@ -5,14 +5,15 @@ import smo from "../assets/executive/smo.jpeg";
 import fd from "../assets/executive/fd.jpeg";
 import td from "../assets/executive/td.jpeg";
 import sec from "../assets/executive/sec.jpg";
-import hr from "../assets/executive/hr.jpeg"
+import hr from "../assets/executive/hr.png";
+import pm from "../assets/executive/pm.png";
 
 
 
 
 const executives = [
   { id: 1, name: " Ebere Ndukwu", position: "Team Leader", image: tl, isLeader: true },
-  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: tl},
+  { id: 2, name: "Johnpaul Anyanwu", position: "Project Manager", image: pm},
   { id: 3, name: "Praise Godwin", position: "Human Resource", image: hr },
   { id: 4, name: "Nmesoma Nnopu", position: "Team Secretary", image: sec },
   { id: 5, name: "Munachi Anyanwu", position: "Financial Director", image: fd },
