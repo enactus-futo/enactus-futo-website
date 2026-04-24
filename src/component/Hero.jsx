@@ -69,7 +69,10 @@ const Hero = ({
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+       .hero-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+         .body-font { font-family: 'DM Sans', sans-serif; }
+      
  
        .hero-slide-enter-next { animation: slideInRight 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
        .hero-slide-enter-prev { animation: slideInLeft 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
@@ -108,8 +111,8 @@ const Hero = ({
           animation: textUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
         }
  
-        .hero-font { font-family: 'Syne', sans-serif; }
-        .body-font { font-family: 'DM Sans', sans-serif; }
+     
+     
  
         .progress-bar {
           animation: progress 5s linear forwards;
@@ -191,7 +194,7 @@ const Hero = ({
         />
         <button
           onClick={goPrev}
-          className="hidden lg:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 items-center justify-center text-white hover:border-[#F5A623] hover:text-[#F5A623] transition-all duration-200 backdrop-blur-sm"
+          className="hidden lg:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 items-center justify-center text-white hover:border-[#F5a623] hover:text-[#F5A623] transition-all duration-200 backdrop-blur-sm"
         >
           <ChevronRight size={20} className="rotate-180" />
         </button>
@@ -200,7 +203,7 @@ const Hero = ({
 
         <button
           onClick={goNext}
-          className="hidden lg:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 items-center justify-center text-white hover:border-[#F5A623] hover:text-[#F5A623] transition-all duration-200 backdrop-blur-sm "
+          className="hidden lg:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-white/30 items-center justify-center text-white hover:border-[#F5A623] hover:text-[#F5a623] transition-all duration-200 backdrop-blur-sm "
         >
           <ChevronRight size={20} />
         </button>
@@ -222,10 +225,10 @@ const Hero = ({
 
               {/* Headline */}
               <div key={`h-${current}`} className="hero-text-enter mb-6">
-                <h1 className="hero-font text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
+                <h1 className="hero-font text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-none mb-2">
                   {headline}
                 </h1>
-                <h1 className="hero-font text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#F5A623] leading-none">
+                <h1 className="hero-font text-3xl sm:text-4xl lg:text-6xl font-extrabold text-[#F5A623] leading-none">
                   {highlight}
                 </h1>
               </div>

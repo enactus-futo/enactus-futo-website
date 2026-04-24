@@ -53,7 +53,7 @@ const ContactForm = () => {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbw567cVyY0FUxN9SPRaYkdNIA8BYTbANd_aKvt46YdcKbhruzhVACZhVoT4JZOlmPb4/exec",
+     
         {
           method: "POST",
           mode: "no-cors", // required for Apps Script

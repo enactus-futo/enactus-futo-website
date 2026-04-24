@@ -1,14 +1,12 @@
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
 
 /* Optional global defaults */
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Syne', sans-serif;
-}
+
 
 /* Hide scrollbar for Chrome, Safari and Edge */
 .no-scrollbar::-webkit-scrollbar {

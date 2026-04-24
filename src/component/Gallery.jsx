@@ -8,6 +8,9 @@ import Picture4 from "../assets/gallery/pics4.jpeg";
 import Picture5 from "../assets/gallery/pics5.jpeg";
 
 
+import LazyImage from "./LazyImage";
+
+
 // Replace with your actual Enactus FUTO images
 // import Img1 from "../assets/gallery/img1.jpg";
 // For now using placeholders — swap src values with your imports
@@ -143,7 +146,7 @@ const GallerySection = () => {
             onClick={() => openLightbox(0)}
             className="relative rounded-2xl overflow-hidden h-64 mb-3 cursor-pointer group"
           >
-            <img
+            <LazyImage
               src={galleryItems[0].src}
               alt={galleryItems[0].caption}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -163,7 +166,7 @@ const GallerySection = () => {
                 onClick={() => openLightbox(index + 1)}
                 className="relative flex-none w-44 h-44 rounded-xl overflow-hidden cursor-pointer snap-start group"
               >
-                <img
+                < img
                   src={item.src}
                   alt={item.caption}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

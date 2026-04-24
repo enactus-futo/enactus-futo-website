@@ -5,6 +5,7 @@ import Picture1 from "../assets/pics5.jpeg";
 import { Trophy, Medal, Award } from "lucide-react";
 
 import Icon from "../assets/MissionIcon.png";
+import LazyImage from "../component/LazyImage";
 
 import { Frown } from "lucide-react";
 import Hero from "../component/hero";
@@ -62,7 +63,7 @@ const About = () => {
     },
     {
       id: 3,
-      title: "Action for Impact Award",
+      title: " ACT Foundation 2024",
       subtitle: "Awarded for community development excellence",
       icon: Award,
       color: "text-green-500",
@@ -87,6 +88,7 @@ const About = () => {
             headline="Driven by Purpose"
             highlight="Powered by People"
             subtext="Enactus FUTO is part of a global network of students and leaders using entrepreneurial action to transform lives."
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
           />
         </section>
 
@@ -113,14 +115,14 @@ const About = () => {
               {/* Icon */}
               <div className="flex justify-center mb-5">
                 <div className="w-12 h-12 md:w-20 md:h-20 bg-[#F5A623]/10 rounded-full flex items-center justify-center">
-                  <img src={Icon} alt="" className="w-6 h-6 object-contain" />
+                  <img src={Icon} alt="" className="w-6 h-6 object-contain " />
                 </div>
               </div>
 
               {/* Title */}
               <h2
                 className="text-2xl md:text-3xl font-bold text-[#1B1464] mb-3"
-                style={{ fontFamily: "'Syne', sans-serif" }}
+  
               >
                 {item.title}
               </h2>
@@ -230,7 +232,7 @@ const About = () => {
 
             {/* Image */}
             <div className="rounded-2xl overflow-hidden mb-6">
-              <img
+              <LazyImage
                 src={Picture1}
                 alt="Enactus global movement"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover"

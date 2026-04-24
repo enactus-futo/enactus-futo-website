@@ -12,100 +12,10 @@ import GallerySection from "../component/Gallery";
 import ExecutivesSection from "../component/executiveCard";
 import FacultyAdvisor from "../component/FacultyAdvisor";
 import SEO from "../component/SEO.jsx";
+import LazyImage from "../component/LazyImage";
 
 
-//     id: 1,
-//     name: "Ndukwu Ebere",
-//     position: "Team Lead",
-//     image: nmeso,
-//   },
-//   {
-//     id: 2,
-//     name: "Johnpaul Anyanwu",
-//     position: "Project manager",
-//     image: nmeso,
-//   },
-//   {
-//     id: 3,
-//     name: "Praise Godwin",
-//     position: "Human Resource Officer",
-//     image: nmeso,
-//   },
-//   {
-//     id: 4,
-//     name: "Nmesoma Nnopu",
-//     position: "Team secretrary",
-//     image: nmeso,
-//   },
-//   {
-//     id: 5,
-//     name: "Munachi Anyanwu",
-//     position: "Financial Director",
-//     image: nmeso,
-//   },
-//   {
-//     id: 6,
-//     name: "Chiamaka Obasi",
-//     position: "Social Media Manager",
-//     image: nmeso,
-//   },
-//   {
-//     id: 7,
-//     name: "Okonkwo Kingsley",
-//     position: "Technical Director",
-//     image: nmeso,
-//   },
-// ];
 
-// // Initials fallback when no photo
-// const getInitials = (name) =>
-//   name
-//     .split(" ")
-//     .map((n) => n[0])
-//     .join("")
-//     .slice(0, 2)
-//     .toUpperCase();
-
-// const ExecCard = ({ name, position, image }) => {
-//   const [imgError, setImgError] = useState(false);
-
-//   return (
-//   <div className="group bg-white rounded-2xl   shadow-md hover:shadow-lg transition-all duration-300 p-3 flex flex-col items-center text-center">
-
-//   {/* Image */}
-//   <div className="relative w-50 h-50  rounded-xl overflow-hidden mb-4">
-//     {image && !imgError ? (
-//       <img
-//         src={image}
-//         alt={name}
-//         onError={() => setImgError(true)}
-//         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-//       />
-//     ) : (
-//       <div className="w-full h-full  flex items-center justify-center">
-//         <span className="text-3xl font-bold text-[#F5A623]">
-//           {getInitials(name)}
-//         </span>
-//       </div>
-//     )}
-
-//     {/* Overlay */}
-//     <div className="absolute inset-0 bg-[#1e1b4b]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-//   </div>
-
-//   {/* Name (NOW uses position style) */}
-//   <h3 className="  w-50 bg-[#1e1b4b] text-[#F5A623] text-sm sm:text-base font-semibold px-4 py-1 rounded-md mb-2">
-//     {name}
-//   </h3>
-
-//   {/* Position (NOW uses name style) */}
-//   <span className=" w-50 bg-[rgb(245,166,35)] text-[#1e1b4b] text-xs font-semibold uppercase tracking-wider px-4 py-1 rounded-md">
-//     {position}
-//   </span>
-
-// </div>
-//   );
-// };
 
 const Team = () => {
   return (
@@ -126,16 +36,17 @@ const Team = () => {
             headline="The Minds Behind"
             highlight="Every Impact"
             subtext="Meet the passionate student leaders driving innovation, sustainability, and change across every Enactus FUTO project."
+         
           />
         </section>
 
         {/* Executive Team */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
           <ExecutivesSection />
         </section>
 
         {/* Faculty Advisor */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <FacultyAdvisor />
         </section>
 
@@ -154,7 +65,7 @@ const Team = () => {
 
             {/* Image */}
             <div className="rounded-2xl overflow-hidden mb-6">
-              <img
+              <LazyImage
                 src={Picture5}
                 alt="Enactus global movement"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover"

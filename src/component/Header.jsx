@@ -3,6 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import ScrollToTop from "./ScrollToTop";
 import Logo from "../assets/logo.png";
+import { motion, AnimatePresence } from "framer-motion";
+
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
@@ -90,30 +92,30 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <nav className="bg-white/90 border  border-black/10 px-4  py-4 mx-4 mb-4 rounded-2xl flex flex-col gap-4 text-center ">
-          {navLinks.map(({ label, to }) => (
-            <NavLink
-              key={to}
-              to={to}
-              onClick={handleLinkClick}
-              className={({ isActive }) =>
-                `px-4 py-3 rounded-full text-sm font-medium text-center transition-all duration-200 border ${
-                  isActive
-                    ? "bg-[#F5A623] text-[#1B1464] font-semibold border-[#F5A623]"
-                    : "text-gray-700 border-gray-200 hover:border-[#F5A623] hover:text-[#1B1464]"
-                }`
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-      </div>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="bg-white/90 shadow border  border-black/10 px-4  py-4 mx-4 mb-4 rounded-2xl flex flex-col gap-4 text-center ">
+            {navLinks.map(({ label, to }) => (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={handleLinkClick}
+                className={({ isActive }) =>
+                  `px-4 py-3 rounded-full text-sm font-medium text-center transition-all duration-200 border ${
+                    isActive
+                      ? "bg-[#F5A623] text-[#1B1464] font-semibold border-[#F5A623]"
+                      : "text-gray-700 border-gray-200 hover:border-[#F5A623] hover:text-[#1B1464]"
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
     </header>
   );
 };

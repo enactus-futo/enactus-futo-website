@@ -30,7 +30,7 @@ const ExecCard = ({ name, position, image, size = "normal" }) => {
 
   return (
     <div className={`relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 ${
-      isLarge ? "h-64 md:h-72"   : "h-52 sm:h-56 md:h-60"
+      isLarge ? "h-64 md:h-80"   : "h-70  md:h-70"
     }`}>
       {image && !imgError ? (
         <img
@@ -66,35 +66,33 @@ const ExecutivesSection = () => {
   const rest = executives.slice(1);
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-16 px-6 md:px-6 lg:px-8 bg-white">
+      <div className=" md:max-w-5xl mx-auto">
 
-        {/* Row 1: Title + Leader */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-end">
-          <div className="flex flex-col justify-end pb-2">
-            
-            <h2 className="text-[#1e1b4b] text-4xl md:text-6xl font-black leading-[1.05] uppercase">
-              Meet The<br />
-              <span className="text-[#F5A623]">2025 / 2026</span><br />
-             Enactus  FUTO<br />
-              Executives
-            </h2>
-          </div>
-          <ExecCard name={leader.name} position={leader.position} image={leader.image} size="large" />
+        {/* Title */}
+        <div className="mb-10 text-center">
+          <h2 className="text-[#1e1b4b] text-4xl md:text-5xl font-black leading-[1.05] uppercase">
+            Meet The<br />
+            <span className="text-[#F5A623]">2025 / 2026</span><br />
+            Enactus FUTO<br />
+            Executives
+          </h2>
+          <p className="text-center text-gray-500 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-10">
+          Meet the current Enactus FUTO Executive Team — dedicated student leaders driving innovation,
+          impact, and sustainable change. Guided by passion and teamwork, they coordinate initiatives
+          that empower communities and strengthen the Enactus vision on campus and beyond.
+        </p>
         </div>
 
-        {/* Rows 2 & 3: 3+3 grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        {/* All 7 cards — 1 col mobile, 3 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ExecCard name={leader.name} position={leader.position} image={leader.image} />
           {rest.map((exec) => (
             <ExecCard key={exec.id} name={exec.name} position={exec.position} image={exec.image} />
           ))}
         </div>
 
-        <p className="text-center text-gray-500 text-md md:text-lg leading-relaxed max-w-2xl mx-auto mt-10">
-          Meet the current Enactus FUTO Executive Team  dedicated student leaders driving innovation,
-          impact, and sustainable change. Guided by passion and teamwork, they coordinate initiatives
-          that empower communities and strengthen the Enactus vision on campus and beyond.
-        </p>
+        
       </div>
     </section>
   );

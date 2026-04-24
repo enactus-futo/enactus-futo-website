@@ -8,6 +8,7 @@ import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SEO from "../component/SEO.jsx";
+import LazyImage from "../component/LazyImage";
 
 const ContactUs = () => {
   return (
@@ -30,7 +31,9 @@ const ContactUs = () => {
             headline="Let's Build Something"
             highlight="Together"
             subtext="Whether you want to join, partner, or learn more  we'd love to hear from you."
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
           />
+
         </section>
 
         {/* contact form */}
@@ -73,7 +76,7 @@ const ContactUs = () => {
 
               {/* Button - Aligned to bottom right like Figma */}
               <div className="flex justify-end">
-                <button className="bg-[#fbbd08] hover:bg-[#eab308] text-[#1e1b4b] font-bold py-4 px-10 rounded-2xl transition-all active:scale-95 shadow-lg">
+                <button className="bg-[#F5A623] hover:bg-[#eab308] text-[#1e1b4b] font-bold py-4 px-10 rounded-2xl transition-all active:scale-95 shadow-lg">
                   Click Link
                 </button>
               </div>

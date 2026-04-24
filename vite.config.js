@@ -8,4 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+    server: {
+    allowedHosts: ['bottle-stubborn-preorder.ngrok-free.dev'], 
+  },
 })

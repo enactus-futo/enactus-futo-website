@@ -15,10 +15,12 @@ import EcoFuel from "../assets/ecofuel.png";
 import RunAm from "../assets/runam.png";
 import Hero from "../component/hero";
 import SEO from "../component/SEO.jsx";
+import LazyImage from "../component/LazyImage";
 
 import Praise from "../assets/praise.png";
 import testimonials1 from "../assets/testimonial1.jpeg";
 import testimonials2 from "../assets/testimonial2.jpeg";
+import testimonials3 from "../assets/testimonial3.jpeg";
 
 
 const stats = [
@@ -137,36 +139,38 @@ const events = [
 const testimonials = [
   {
     id: 1,
-    name: "Mr. Chidum",
+    name: "Chidum Vitus Obinwa",
     role: "FOUNDER, CHIDUM TECH.",
-    quote:
-      "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.  My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.  When I look back, I remember that Enactus FUTO was the spring board that set me in motion.",
+   quote: [
+  "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.After working with a few failed startups, Enactus showed me the full process — from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels — giving any venture a much stronger chance of succeeding in the market.",
+  "My time with Enactus was all about learning what I actually needed to know. I'm proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively."
+],
     image: testimonials2,
   },
   {
     id: 2,
-    name: "Kingsley",
+    name: "Gennersaret Adaeze Ajuka",
     role: "PEOPLE MANAGER, WINICH FARMS.",
-    quote:
-      "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.  After working with a few failed startups, Enactus showed me the full process - from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels - giving any venture a much stronger chance of succeeding in the market.  My time with Enactus was all about learning what I actually needed to know. I’m proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively.",
+    quote: [
+    "Enactus refined me into a problem-solver with a strong bias for action and social impact. Through collaborative projects like the eco-friendly briquettes initiative, \"Becoming a Fisher,\" and my brainchild, Switch360, I learned to apply business thinking to real community challenges while building leadership, communication, and resilience.",
+    "These experiences now shape my work as Founder of NextGen Digital Foundation, where I focus on providing practical, execution-driven digital education and real-world problem solving for African youths.",
+    "Enactus taught me that disciplined teamwork, anchored in clear purpose and consistent execution, is what transforms ideas into real, measurable impact — and this principle underpins everything we are building at NextGen."
+  ],
+    image: testimonials3,
+  },
+  {
+    id: 3,
+    name: "Chidiebere Ikenna Ernest",
+    role: "PEOPLE MANAGER, WINICH FARMS.",
+   quote: [
+  "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.",
+  "My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.",
+  "When I look back, I remember that Enactus FUTO was the springboard that set me in motion."
+],
     image: testimonials1,
   },
-  // {
-  // //   id: 3,
-  // //   name: "Praise Godwin",
-  // //   role: "PEOPLE MANAGER, WINICH FARMS.",
-  // //   quote:
-  // //     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  // //   image: Praise,
-  // // },
-  // // {
-  // //   id: 4,
-  // //   name: "Praise Godwin",
-  // //   role: "PEOPLE MANAGER, WINICH FARMS.",
-  // //   quote:
-  // //     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  // //   image: Praise,
-  // // },
+    
+
 ];
 
 const Home = () => {
@@ -191,6 +195,7 @@ const Home = () => {
           headline="Creating Positive Change"
           highlight="Through Entrepreneurial Action"
           subtext="We're a community of student leaders committed to using business principles to create sustainable social impact in FUTO and beyond."
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
         />
       </section>
 
@@ -279,7 +284,7 @@ const Home = () => {
             >
               {/* Image with overlay on hover */}
               <div className="relative overflow-hidden h-56">
-                <img
+                <LazyImage
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -338,10 +343,7 @@ const Home = () => {
             Upcoming Events
           </h2>
 
-          {/* Horizontal Scroll Container 
-            'overflow-x-auto' enables scrolling.
-            'scrollbar-hide' is a custom utility .
-        */}
+          
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar">
             {events.map((event) => (
               <div
@@ -376,7 +378,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <h2
             style={{ fontFamily: "'Syne', sans-serif" }}
-            className="text-3xl md:text-5xl text-center font-bold text-[#1B1464]"
+            className="text-3xl md:text-5xl text-center font-bold text-[#1B1464] pb-20"
           >
             Testimonials
           </h2>
@@ -390,36 +392,38 @@ const Home = () => {
               >
                 {/* Quote Icon (Top Right) */}
                 <div className="absolute top-6 md:top-2 right-8   h-8 w-8 opacity-60">
-                  <img src={Quote} alt="" />
+                  <LazyImage src={Quote} alt="" />
                 </div>
 
                 {/* Profile Image */}
                 <div className="shrink-0">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-200">
-                    <img
+                  <div className="w-32 h-32 rounded-full overflow-hidden ">
+                    <LazyImage
                       src={t.image}
                       alt={t.name}
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                      className="w-full h-full object-cover transition-all duration-300"
                     />
                   </div>
                 </div>
 
                 {/* Text Content */}
-                <div className="flex-1  md:px-4 ">
-                  <p className="text-gray-600 text-[15px] leading-relaxed mb-6 italic">
-                    "{t.quote}"
-                  </p>
-                  <div>
-                    <h4 className="font-bold text-[#1e1b4b] text-lg leading-tight">
-                      {t.name}
-                    </h4>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mt-1">
-                      {t.role}
-                    </p>
-                  </div>
-                </div>
+                <div className="mb-6 space-y-3">
+ {Array.isArray(t.quote)
+  ? t.quote.map((para, i) => (
+      <p key={i} className="text-gray-600 text-[15px] leading-relaxed italic">
+        {para}
+      </p>
+    ))
+  : (
+    <p className="text-gray-600 text-[15px] leading-relaxed italic">
+      {t.quote}
+    </p>
+  )
+}
+</div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
