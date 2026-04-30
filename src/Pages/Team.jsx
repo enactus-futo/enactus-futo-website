@@ -8,6 +8,7 @@ import Hero from "../component/hero";
 import Logo from "../assets/logo.png";
 import Picture1 from "../assets/pics1.jpeg";
 import Picture5 from "../assets/pics5.jpeg";
+import Picture6 from "../assets/gallery/pics6.jpeg";
 import GallerySection from "../component/Gallery";
 import ExecutivesSection from "../component/executiveCard";
 import FacultyAdvisor from "../component/FacultyAdvisor";
@@ -25,7 +26,7 @@ const Team = () => {
         description="Meet the 2025/2026 Enactus FUTO executive team and members driving innovation and social impact at Federal University of Technology Owerri."
         url="https://enactusfuto.org/team"
       />
-      <div className="w-full">
+      <div className="w-full bg-gray-100">
         {/* hero section */}
         <section
           className="relative w-full overflow-hidden"
@@ -39,16 +40,17 @@ const Team = () => {
          
           />
         </section>
+           {/* Faculty Advisor */}
+        <section className="py-14 px-4 sm:px-6 lg:px-8 bg-gray-100">
+          <FacultyAdvisor />
+        </section>
 
         {/* Executive Team */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className=" bg-gray-100">
           <ExecutivesSection />
         </section>
 
-        {/* Faculty Advisor */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <FacultyAdvisor />
-        </section>
+     
 
         {/* Gallery Section */}
         <section>
@@ -66,7 +68,7 @@ const Team = () => {
             {/* Image */}
             <div className="rounded-2xl overflow-hidden mb-6">
               <LazyImage
-                src={Picture5}
+                src={Picture6}
                 alt="Enactus global movement"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover"
               />

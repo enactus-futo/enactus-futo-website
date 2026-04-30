@@ -6,6 +6,9 @@ import Picture2 from "../assets/gallery/pics2.jpeg";
 import Picture3 from "../assets/gallery/pics3.jpeg";
 import Picture4 from "../assets/gallery/pics4.jpeg";
 import Picture5 from "../assets/gallery/pics5.jpeg";
+import Picture7 from "../assets/gallery/pics7.jpeg";
+import Picture8 from "../assets/gallery/pics8.jpeg";
+
 
 
 import LazyImage from "./LazyImage";
@@ -42,14 +45,14 @@ const galleryItems = [
   },
   {
     id: 5,
-    src: Picture5,
+    src: Picture8,
     caption: "Enactus Summit",
     span: "col-span-2 row-span-1",
   },
   {
     id: 6,
-    src: Picture3,
-    caption: "Innovation Fair",
+    src: Picture7,
+    caption: "2024 World Cup",
     span: "col-span-1 row-span-1",
   },
 ];

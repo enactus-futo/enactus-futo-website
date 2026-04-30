@@ -21,40 +21,34 @@ const executives = [
   { id: 7, name: "Kingsley Okoronkwo", position: "Technical Director", image: td },
 ];
 
-const getInitials = (name) =>
-  name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
-
-const ExecCard = ({ name, position, image, size = "normal" }) => {
+const ExecCard = ({ name, position, image }) => {
   const [imgError, setImgError] = useState(false);
-  const isLarge = size === "large";
 
   return (
-    <div className={`relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 ${
-      isLarge ? "h-64 md:h-80"   : "h-70  md:h-70"
-    }`}>
+    <div className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 w-full aspect-[3/4]">
+
       {image && !imgError ? (
         <img
           src={image}
           alt={name}
           onError={() => setImgError(true)}
-        style={{ objectPosition: "center 22%" }}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          style={{ objectPosition: "center 15%" }}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       ) : (
         <div className="w-full h-full bg-[#1e1b4b] flex items-center justify-center">
-          <span className={`font-bold text-[#F5A623] ${isLarge ? "text-5xl" : "text-4xl"}`}>
+          <span className="font-bold text-[#F5A623] text-4xl">
             {getInitials(name)}
           </span>
         </div>
       )}
+
       <div className="absolute bottom-0 left-0 right-0">
         <div className="bg-[#F5A623] px-3 py-1.5">
-          <p className={`text-[#1e1b4b] font-bold leading-tight ${isLarge ? "text-lg" : "text-md"}`}>
-            {name}
-          </p>
+          <p className="text-[#1e1b4b] font-bold text-md md:text-lgleading-tight">{name}</p>
         </div>
         <div className="bg-black/70 px-3 py-1">
-          <p className="text-white/90 text-s">{position}</p>
+          <p className="text-white/90 text-md md:text-lg">{position}</p>
         </div>
       </div>
     </div>
@@ -62,40 +56,46 @@ const ExecCard = ({ name, position, image, size = "normal" }) => {
 };
 
 const ExecutivesSection = () => {
-  const leader = executives[0];
-  const rest = executives.slice(1);
+  const firstFour = executives.slice(0, 4);
+  const lastThree = executives.slice(4);
 
   return (
-    <section className="py-16 px-6 md:px-6 lg:px-8 bg-white">
-      <div className=" md:max-w-5xl mx-auto">
+    <section className="py-14 pt-2 px-4 md:px-6 lg:px-8 bg-gray-100">
+      <div className="max-w-7xl mx-auto">
 
-        {/* Title */}
-        <div className="mb-10 text-center">
-          <h2 className="text-[#1e1b4b] text-4xl md:text-5xl font-black leading-[1.05] uppercase">
-            Meet The<br />
-            <span className="text-[#F5A623]">2025 / 2026</span><br />
-            Enactus FUTO<br />
-            Executives
-          </h2>
-          <p className="text-center text-gray-500 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-10">
-          Meet the current Enactus FUTO Executive Team — dedicated student leaders driving innovation,
-          impact, and sustainable change. Guided by passion and teamwork, they coordinate initiatives
-          that empower communities and strengthen the Enactus vision on campus and beyond.
-        </p>
-        </div>
-
-        {/* All 7 cards — 1 col mobile, 3 col desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ExecCard name={leader.name} position={leader.position} image={leader.image} />
-          {rest.map((exec) => (
-            <ExecCard key={exec.id} name={exec.name} position={exec.position} image={exec.image} />
+        {/* Row 1: 1 col mobile → 4 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 mb-10 md:mb-6 px-10 ">
+          {firstFour.map((exec) => (
+            <ExecCard
+              key={exec.id}
+              name={exec.name}
+              position={exec.position}
+              image={exec.image}
+            />
           ))}
         </div>
 
-        
+        {/* Row 2: 1 col mobile → 3 col desktop, centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 md:max-w-[75%] md:mx-auto px-10">
+          {lastThree.map((exec) => (
+            <ExecCard
+              key={exec.id}
+              name={exec.name}
+              position={exec.position}
+              image={exec.image}
+            />
+          ))}
+        </div>
+
       </div>
     </section>
   );
 };
 
 export default ExecutivesSection;
+
+
+
+
+
+

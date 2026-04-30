@@ -19,7 +19,7 @@ const ContactUs = () => {
         url="https://enactusfuto.org/contact"
       />
 
-      <div className="w-full">
+      <div className="w-full bg-gray-100">
         {/* hero section */}
 
         <section

@@ -89,7 +89,7 @@ const ContactForm = () => {
 }, [submitted]);
 
   return (
-    <section className="py-16 px-2  md:px-8 md:bg-white">
+    <section className="py-16 px-2  md:px-8  bg-gray-50 rounded-2xl">
       <div className="max-w-xl mx-auto   p-4 sm:p-10">
         {/* Title */}
         <h2 className="text-[#1e1b4b] text-xl sm:text-3xl font-bold text-center mb-8">

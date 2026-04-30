@@ -50,8 +50,8 @@ const About = () => {
       title: "2nd Runner Up National Finale 2025",
       subtitle: "Competed at the Enactus Nigeria National Competition",
       icon: Medal,
-      color: "text-gray-500",
-      bg: "bg-gray-100",
+      color: "text-yellow-500",
+      bg: " bg-yellow-100",
     },
     {
       id: 2,
@@ -63,11 +63,11 @@ const About = () => {
     },
     {
       id: 3,
-      title: " ACT Foundation 2024",
+      title: " Action with Africa  Award",
       subtitle: "Awarded for community development excellence",
       icon: Award,
-      color: "text-green-500",
-      bg: "bg-green-100",
+      color: "text-yellow-500",
+      bg: "bg-yellow-100",
     },
   ];
   return (
