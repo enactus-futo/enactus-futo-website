@@ -37,14 +37,14 @@ const ContactUs = () => {
         </section>
 
         {/* contact form */}
-        <section className="py-12 px-4  md:px-8 md:bg-gray-50">
+        <section className="py-12 px-4  md:px-8 ">
           <div className="w-full md:max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <ContactForm />
           </div>
         </section>
 
         {/* FAQ  */}
-        <section className="py-12 px-4  md:px-8 md:bg-gray-50">
+        <section className="py-12 px-4  md:px-8 ">
           <div className="w-full md:max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <FAQ />
           </div>

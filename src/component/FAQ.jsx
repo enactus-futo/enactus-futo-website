@@ -34,7 +34,7 @@ const FAQ = () => {
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
   return (
-    <section className="py-12 px-2 sm:px-6 lg:px-8 bg-gray-50 rounded-2xl">
+    <section className="py-12 px-2 sm:px-6 lg:px-8 bg-white rounded-2xl">
       <div className="max-w-2xl mx-auto">
 
         {/* Title */}

@@ -57,9 +57,9 @@ const FacultyAdvisor = () => {
       </div>
 
       {/* Divider with "Executive Team" label */}
-      <div className="flex items-center gap-4 max-w-5xl mx-auto  px-2">
+      <div className="flex items-center gap-4 max-w-7xl mx-auto  px-2">
         <hr className="flex-1 border-t border-gray-200" />
-        <span className="text-md font-semibold uppercase tracking-widest text-[#F5A623] whitespace-nowrap">
+        <span className="text-lg font-semibold uppercase tracking-widest text-[#F5A623] whitespace-nowrap">
           Executive Team
         </span>
         <hr className="flex-1 border-t border-gray-200" />
