@@ -117,7 +117,7 @@ const events = [
     date: "Anticipate...",
     title: "Enactus Week 2026",
     description:
-      "A week of celebration of innovation, leadership, and impact—bringing students together through projects, outreach, and activities focused on creating sustainable change in our community.",
+      "A week of celebration of innovation, leadership, and impact bringing students together through projects, outreach, and activities focused on creating sustainable change in our community.",
   },
   {
     id: 2,
@@ -182,7 +182,7 @@ const Home = () => {
       keywords="Enactus FUTO, FUTO student organizations, FUTO clubs, Federal University Technology Owerri, Enactus Nigeria, student entrepreneurship FUTO Owerri"
       url="https://enactusfuto.org"
     />
-    <div className="w-full bg-[#FFF8EE]">
+    <div className="w-full bg-gray-100">
       {/* hero section */}
 
       <section
@@ -211,7 +211,7 @@ const Home = () => {
       </section>
 
       {/* about */}
-      <section className="w-full bg-[#fdf6ec] py-12 md:py-16">
+      <section className="w-full  py-12 md:py-16">
         <div className="mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p
@@ -254,7 +254,7 @@ const Home = () => {
       </section>
 
       {/* Our Projects */}
-      <section className="w-full py-16 px-6 md:px-12 lg:px-24 bg-white">
+      <section className="w-full py-16 px-6 md:px-12 lg:px-24 ">
         {/* Header — fully centered */}
         <div className="text-center mb-12">
           <p className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.25em] mb-3">
@@ -374,7 +374,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+      <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2
             style={{ fontFamily: "'Syne', sans-serif" }}
@@ -429,7 +429,7 @@ const Home = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-white ">
+      <section >
         <div className="w-full py-16 px-6 md:px-18 lg:px-24 mx-auto">
           {/* The CTA Card */}
           <div className="bg-[#1e1b4b] rounded-[48px] p-12 md:p-24 text-center">

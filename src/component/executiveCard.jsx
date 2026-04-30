@@ -24,16 +24,19 @@ const executives = [
 const ExecCard = ({ name, position, image }) => {
   const [imgError, setImgError] = useState(false);
 
-  return (
-    <div className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 w-full aspect-[3/4]">
+  const getInitials = (fullName) => {
+    return fullName.trim().split(/\s+/).map(n => n[0]).join("").toUpperCase();
+  };
 
+  return (
+ 
+    <div className="relative rounded-[28px] overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 w-full max-w-70 mx-auto aspect-3/4">
       {image && !imgError ? (
         <img
           src={image}
           alt={name}
           onError={() => setImgError(true)}
-          style={{ objectPosition: "center 15%" }}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
         />
       ) : (
         <div className="w-full h-full bg-[#1e1b4b] flex items-center justify-center">
@@ -43,12 +46,17 @@ const ExecCard = ({ name, position, image }) => {
         </div>
       )}
 
+      {/* The Figma-style Plate */}
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="bg-[#F5A623] px-3 py-1.5">
-          <p className="text-[#1e1b4b] font-bold text-md md:text-lgleading-tight">{name}</p>
+        <div className="bg-[#F5A623] px-4 py-2">
+          <p className="text-[#1e1b4b] font-black text-base md:text-lg leading-tight uppercase tracking-tighter italic">
+            {name}
+          </p>
         </div>
-        <div className="bg-black/70 px-3 py-1">
-          <p className="text-white/90 text-md md:text-lg">{position}</p>
+        <div className="bg-[#1e1b4b] px-4 py-1.5">
+          <p className="text-white/90 text-xs md:text-sm font-semibold">
+            {position}
+          </p>
         </div>
       </div>
     </div>
@@ -56,16 +64,14 @@ const ExecCard = ({ name, position, image }) => {
 };
 
 const ExecutivesSection = () => {
-  const firstFour = executives.slice(0, 4);
-  const lastThree = executives.slice(4);
-
   return (
-    <section className="py-14 pt-2 px-4 md:px-6 lg:px-8 bg-gray-100">
+    <section className="pb-20 bg-gray-100 px-6">
       <div className="max-w-7xl mx-auto">
+       
 
-        {/* Row 1: 1 col mobile → 4 col desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 mb-10 md:mb-6 px-10 ">
-          {firstFour.map((exec) => (
+       
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-6 justify-items-center">
+          {executives.map((exec) => (
             <ExecCard
               key={exec.id}
               name={exec.name}
@@ -74,19 +80,6 @@ const ExecutivesSection = () => {
             />
           ))}
         </div>
-
-        {/* Row 2: 1 col mobile → 3 col desktop, centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 md:max-w-[75%] md:mx-auto px-10">
-          {lastThree.map((exec) => (
-            <ExecCard
-              key={exec.id}
-              name={exec.name}
-              position={exec.position}
-              image={exec.image}
-            />
-          ))}
-        </div>
-
       </div>
     </section>
   );

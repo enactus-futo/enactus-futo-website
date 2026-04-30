@@ -49,7 +49,7 @@ const FacultyAdvisor = () => {
               Prof. Thaddues Ebringa
             </h3>
             <p className="text-gray-500 text-md leading-relaxed mt-2 max-w-xl">
-              A guiding force behind Enactus FUTO — providing mentorship, strategic direction,
+              A guiding force behind Enactus FUTO  providing mentorship, strategic direction,
               and unwavering support to shape our projects and keep us aligned with our mission of impact.
             </p>
           </div>
@@ -59,7 +59,7 @@ const FacultyAdvisor = () => {
       {/* Divider with "Executive Team" label */}
       <div className="flex items-center gap-4 max-w-5xl mx-auto  px-2">
         <hr className="flex-1 border-t border-gray-200" />
-        <span className="text-md font-semibold uppercase tracking-widest text-gray-400 whitespace-nowrap">
+        <span className="text-md font-semibold uppercase tracking-widest text-[#F5A623] whitespace-nowrap">
           Executive Team
         </span>
         <hr className="flex-1 border-t border-gray-200" />

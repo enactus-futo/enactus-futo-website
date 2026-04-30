@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import Picture1 from "../assets/pics5.jpeg";
+
+import Picture1 from "../assets/gallery/pics8.jpeg";
 import { Trophy, Medal, Award } from "lucide-react";
 
 import Icon from "../assets/MissionIcon.png";
@@ -223,7 +224,7 @@ const About = () => {
         </section>
 
         {/* Be Part of a Global Movement */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <div className="w-full bg-[#1e1b4b] rounded-[20px] overflow-hidden p-6 sm:p-8 shadow-xl">
             {/* Title */}
             <h2 className="text-white text-center text-2xl sm:text-3xl font-bold mb-6">
