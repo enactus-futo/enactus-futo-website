@@ -17,7 +17,7 @@ import Hero from "../component/hero";
 import SEO from "../component/SEO.jsx";
 import LazyImage from "../component/LazyImage";
 
-import Praise from "../assets/praise.png";
+
 import testimonials1 from "../assets/testimonial1.jpeg";
 import testimonials2 from "../assets/testimonial2.jpeg";
 import testimonials3 from "../assets/testimonial3.jpeg";

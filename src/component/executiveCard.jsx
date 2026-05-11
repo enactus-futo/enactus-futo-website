@@ -1,11 +1,11 @@
 import { useState } from "react";
-import tl from "../assets/executive/tl.png";
+import tl from "../assets/executive/tl.jpg";
 
-import smo from "../assets/executive/smo.jpeg";
+import smo from "../assets/executive/smo.jpg";
 import fd from "../assets/executive/fd.jpeg";
-import td from "../assets/executive/td.jpeg";
-import sec from "../assets/executive/sec.jpg";
-import hr from "../assets/executive/hr.png";
+import td from "../assets/executive/td.jpg";
+import sec from "../assets/executive/sec.jpeg";
+import hr from "../assets/executive/hr.jpg";
 import pm from "../assets/executive/pm.png";
 
 
