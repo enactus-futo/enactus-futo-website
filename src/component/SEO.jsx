@@ -1,14 +1,17 @@
 import { Helmet } from "react-helmet-async";
 
+
 const SEO = ({ title, description, keywords, url }) => {
-  const siteName = "Enactus FUTO";
+  const siteName = "ENACTUS FUTO";
   const defaultDesc = "Enactus FUTO is a student-led entrepreneurial organization at Federal University of Technology Owerri, creating social impact through innovative projects.";
   const defaultKeywords = "Enactus FUTO, Enactus Nigeria, FUTO student organization, entrepreneurship FUTO, social impact Owerri, Enactus Federal University Technology Owerri, FUTO, Federal University of Technology Owerri, FUTO clubs, FUTO organizations, FUTO students, FUTO social entrepreneurship, FUTO innovation, FUTO sustainability, FUTO community development, FUTO student leaders, FUTO projects, Enactus Nigeria, Enactus clubs Nigeria ";
+
+   
 
   return (
     <Helmet>
       {/* Basic */}
-      <title>{title ? `${title} | ${siteName}` : siteName}</title>
+      <title>{siteName}</title>
       <meta name="description" content={description || defaultDesc} />
       <meta name="keywords" content={keywords || defaultKeywords} />
       <meta name="author" content="Enactus FUTO" />

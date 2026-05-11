@@ -76,9 +76,14 @@ const ContactUs = () => {
 
               {/* Button - Aligned to bottom right like Figma */}
               <div className="flex justify-end">
-                <button className="bg-[#F5A623] hover:bg-[#eab308] text-[#1e1b4b] font-bold py-4 px-10 rounded-2xl transition-all active:scale-95 shadow-lg">
-                  Click Link
-                </button>
+                <a
+                href="https://chat.whatsapp.com/KnmxtlVli2F34b6RiCSjFL?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#F5A623] text-[#1e1b4b] font-semibold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
+              >
+                Join Group
+              </a>
               </div>
 
               {/* Optional: Subtle decorative element if seen in figma background */}
