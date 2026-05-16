@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 import Hero from "../component/Hero";
 
 import Logo from "../assets/logo.png";
-import Picture1 from "../assets/pics1.jpeg";
-import Picture5 from "../assets/pics5.jpeg";
+import Picture1 from "../assets/gallery/pics1.jpeg";
+import Picture5 from "../assets/gallery/pics5.jpeg";
 import Picture6 from "../assets/gallery/pics6.jpeg";
 import GallerySection from "../component/Gallery";
 import ExecutivesSection from "../component/executiveCard";
