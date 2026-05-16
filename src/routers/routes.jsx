@@ -1,8 +1,8 @@
 import { useRoutes } from "react-router-dom";
-import Home from "../Pages/home";
-import About from "../Pages/about";
-import ContactUs from "../Pages/contactUs";
-import Team from "../Pages/team";
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import ContactUs from "../Pages/ContactUs";
+import Team from "../Pages/Team";
 
 import ScrollToTop from "../component/ScrollToTop";
 import SharedLayOut from "../component/layOut/SharedLayOut";
