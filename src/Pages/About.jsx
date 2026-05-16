@@ -9,7 +9,7 @@ import Icon from "../assets/MissionIcon.png";
 import LazyImage from "../component/LazyImage";
 
 import { Frown } from "lucide-react";
-import Hero from "../component/hero";
+import Hero from "../component/Hero";
 import SEO from "../component/SEO.jsx";
 
 const About = () => {

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import Hero from "../component/hero";
+import Hero from "../component/Hero";
 
 import Logo from "../assets/logo.png";
 import Picture1 from "../assets/pics1.jpeg";

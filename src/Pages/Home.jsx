@@ -13,7 +13,7 @@ import SDG from "../assets/sdg.png";
 import logo from "../assets/logo.png";
 import EcoFuel from "../assets/ecofuel.png";
 import RunAm from "../assets/runam.png";
-import Hero from "../component/hero";
+import Hero from "../component/Hero";
 import SEO from "../component/SEO.jsx";
 import LazyImage from "../component/LazyImage";
 
