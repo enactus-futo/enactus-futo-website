@@ -14,9 +14,7 @@ import Picture8 from "../assets/gallery/pics8.jpeg";
 import LazyImage from "./LazyImage";
 
 
-// Replace with your actual Enactus FUTO images
-// import Img1 from "../assets/gallery/img1.jpg";
-// For now using placeholders — swap src values with your imports
+
 
 const galleryItems = [
   {

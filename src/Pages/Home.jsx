@@ -13,6 +13,7 @@ import SDG from "../assets/sdg.png";
 import logo from "../assets/logo.png";
 import EcoFuel from "../assets/ecoFuel.png";
 import RunAm from "../assets/runAm.png";
+import UniClear from "../assets/uniclear.jpeg";
 import Hero from "../component/Hero";
 import SEO from "../component/SEO.jsx";
 import LazyImage from "../component/LazyImage";
@@ -105,7 +106,7 @@ const projects = [
     description:
       "Uniclear is a clearance studio designed specifically for students and universities, providing structured solutions for decluttering, item clearance, and sustainable disposal of unwanted belongings in campus environments.",
     metric: "500 students reached",
-    image: RunAm,
+    image: UniClear,
     badgeColor: "bg-blue-400",
   },
 ];
@@ -272,11 +273,11 @@ const Home = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stack-card">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group cursor-pointer stack-card md:static md:mb-0 flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group cursor-pointer  md:static md:mb-0 flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               style={{
                 top: `calc(80px + ${index * 200}px)`,
                 zIndex: index + 1,
