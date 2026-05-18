@@ -12,7 +12,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    // You can log to a service like Sentry here later
+  
     console.error("Error caught:", error, info);
   }
 
