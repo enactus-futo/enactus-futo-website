@@ -53,7 +53,7 @@ const LazyImage = ({ src, alt, className = "", style = {} }) => {
           alt={alt}
           onLoad={() => setLoaded(true)}
           onError={() => setError(true)}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${
+          className={`w-full h-full  transition-opacity duration-500 ${
             loaded ? "opacity-100" : "opacity-0"
           } ${className}`}
         />
