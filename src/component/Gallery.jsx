@@ -3,7 +3,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import Picture1 from "../assets/gallery/pics1.jpeg";
 import Picture2 from "../assets/gallery/pics2.jpeg";
-import Picture3 from "../assets/gallery/pics3.jpeg";
+import Picture3 from "../assets/gallery/Pics3.jpeg";
 import Picture4 from "../assets/gallery/pics4.jpeg";
 import Picture5 from "../assets/gallery/pics5.jpeg";
 import Picture7 from "../assets/gallery/pics7.jpeg";
