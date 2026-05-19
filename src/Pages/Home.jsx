@@ -86,6 +86,7 @@ const projects = [
     metric: "130kg waste recycled weekly",
     image: EcoFuel,
     badgeColor: "bg-orange-400",
+    metricColor: "text-orange-400",
   },
   {
     id: 2,
@@ -96,6 +97,7 @@ const projects = [
     metric: "0.2CO2 per km saved",
     image: RunAm,
     badgeColor: "bg-green-300",
+    metricColor: "text-green-300",
   },
   {
     id: 3,
@@ -106,6 +108,7 @@ const projects = [
     metric: "500 students reached",
     image: UniClear,
     badgeColor: "bg-blue-400",
+    metricColor: "text-blue-400",
   },
 ];
 
@@ -305,7 +308,7 @@ const Home = () => {
 
                   {/* Footer */}
                   <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-2">
-                    <span className="text-xs font-semibold text-[#F5A623] uppercase tracking-wide">
+                    <span className={`text-xs font-semibold ${project.metricColor} uppercase tracking-wide`}>
                       {project.metric}
                     </span>
                     {/* <div className="w-8 h-8 rounded-full bg-[#1B1464]/5 flex items-center justify-center group-hover:bg-[#F5A623] transition-colors duration-300">
