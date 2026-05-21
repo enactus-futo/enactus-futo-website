@@ -144,8 +144,10 @@ const testimonials = [
     name: "Chidum Vitus Obinwa",
     role: "FOUNDER, CHIDUM TECH.",
     quote: [
-      "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.After working with a few failed startups, Enactus showed me the full process — from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels — giving any venture a much stronger chance of succeeding in the market.",
-      "My time with Enactus was all about learning what I actually needed to know. I'm proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively.",
+       "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.",
+      "My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.",
+      "When I look back, I remember that Enactus FUTO was the springboard that set me in motion.",
+     
     ],
     image: testimonials2,
   },
@@ -165,9 +167,8 @@ const testimonials = [
     name: "Chidiebere Ikenna Ernest",
     role: "PEOPLE MANAGER, WINICH FARMS.",
     quote: [
-      "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.",
-      "My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.",
-      "When I look back, I remember that Enactus FUTO was the springboard that set me in motion.",
+    "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.After working with a few failed startups, Enactus showed me the full process — from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels — giving any venture a much stronger chance of succeeding in the market.",
+      "My time with Enactus was all about learning what I actually needed to know. I'm proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively.",
     ],
     image: testimonials1,
   },
