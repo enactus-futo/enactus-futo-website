@@ -123,7 +123,7 @@ const events = [
   },
   {
     id: 2,
-    date: "Anticipate...",
+    date: "13th August 2026",
     title: "Enactus National Competition",
     description:
       "Representing our institution at the Enactus National Competition, where our projects were showcased on a national stage, demonstrating real impact and sustainable solutions.",
