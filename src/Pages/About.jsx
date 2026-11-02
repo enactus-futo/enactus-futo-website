@@ -12,6 +12,7 @@ import { Frown } from "lucide-react";
 import Hero from "../component/Hero";
 import SEO from "../component/SEO.jsx";
 
+
 const About = () => {
   // core values data
   const coreValues = [

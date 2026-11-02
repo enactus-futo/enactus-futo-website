@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import ContactUs from "../Pages/ContactUs";
 import Team from "../Pages/Team";
+import Achievement from "../Pages/Achievements";
 
 import ScrollToTop from "../component/ScrollToTop";
 import SharedLayOut from "../component/layOut/SharedLayOut";
@@ -31,6 +32,10 @@ export function Routes() {
         {
           path: "team",
           element: <Team />,
+        },
+        {
+          path: "achievements",
+          element: <Achievement />,
         },
         {
           path: "*",

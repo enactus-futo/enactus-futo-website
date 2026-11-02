@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
+import image from "../assets/Achievements/ESW.jpg";
+
 import ScrollToTop from "../component/ScrollToTop";
 import Bulb from "../assets/bulb.png";
 import Icon from "../assets/icon.png";
@@ -11,7 +13,7 @@ import Quote from "../assets/quoteIcon.png";
 import People from "../assets/people.png";
 import SDG from "../assets/sdg.png";
 import logo from "../assets/logo.png";
-import EcoFuel from "../assets/ecoFuel.png";
+import EcoFuel from "../assets/ecoFuel.jpeg";
 import RunAm from "../assets/runAm.png";
 import UniClear from "../assets/uniclear.jpeg";
 import Hero from "../component/Hero";
@@ -116,25 +118,19 @@ const projects = [
 const events = [
   {
     id: 1,
-    date: "Anticipate...",
-    title: "Enactus Week 2026",
+    date: "16th–19th November 2026",
+    title: "Enactus World Cup 2026",
     description:
-      "A week of celebration of innovation, leadership, and impact bringing students together through projects, outreach, and activities focused on creating sustainable change in our community.",
+      "Taking our EcoFuel project to the global stage, showcasing our commitment to sustainability, innovation, and entrepreneurial action that creates lasting community impact.",
   },
   {
     id: 2,
-    date: "13th August 2026",
-    title: "Enactus National Competition",
+    date: "Upcoming",
+    title: "Executive Handover",
     description:
-      "Representing our institution at the Enactus National Competition, where our projects were showcased on a national stage, demonstrating real impact and sustainable solutions.",
+      "Marking a new chapter in Enactus FUTO's journey as outgoing executives pass on leadership, experience, and responsibility to the next team, ensuring continuity and sustained impact.",
   },
-  {
-    id: 3,
-    date: "Anticipate",
-    title: "Clean Up drive",
-    description:
-      "A community driven environmental initiative focused on promoting cleanliness, sustainability, and awareness through active participation and responsible waste management.",
-  },
+
 ];
 
 // testimonials
@@ -144,10 +140,9 @@ const testimonials = [
     name: "Chidum Vitus Obinwa",
     role: "FOUNDER, CHIDUM TECH.",
     quote: [
-       "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.",
+      "Enactus FUTO shaped me and prepared me for the interesting world of corporate business.",
       "My first sale to a real customer was as an Enactus Marketing team member. Today, I have sold and built valuable relationships with over 10,000 retail and enterprise clients interested in using services in the financial technology sector.",
       "When I look back, I remember that Enactus FUTO was the springboard that set me in motion.",
-     
     ],
     image: testimonials2,
   },
@@ -167,7 +162,7 @@ const testimonials = [
     name: "Chidiebere Ikenna Ernest",
     role: "PEOPLE MANAGER, WINICH FARMS.",
     quote: [
-    "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.After working with a few failed startups, Enactus showed me the full process — from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels — giving any venture a much stronger chance of succeeding in the market.",
+      "Enactus is one of the best societies at FUTO, and it taught me how to run a business the right way.After working with a few failed startups, Enactus showed me the full process — from ideation and feasibility studies, all the way to marketing across B2B, B2C, and even B2G channels — giving any venture a much stronger chance of succeeding in the market.",
       "My time with Enactus was all about learning what I actually needed to know. I'm proud to have been part of a community of brilliant minds, and I got the most out of it by participating actively.",
     ],
     image: testimonials1,
@@ -212,44 +207,79 @@ const Home = () => {
         </section>
 
         {/* about */}
-        <section className="w-full  py-12 md:py-16">
-          <div className="mx-auto px-4 md:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p
-                className="text-[#F5A623] text-xs font-bold uppercase tracking-[0.3em] mb-3"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Who We Are
-              </p>
-              <h2
-                className="text-3xl md:text-5xl font-extrabold text-[#1B1464] mb-6"
-                style={{ fontFamily: "'Syne', sans-serif" }}
-              >
-                About Us
-              </h2>
-              <p
-                className="text-[#4a4a6a] text-lg md:text-xl leading-relaxed mb-8"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Enactus FUTO is part of a global network of student, academic,
-                and business leaders committed to using the power of
-                entrepreneurial action to transform lives and shape a better,
-                more sustainable world.
-                <span>
-                  {" "}
-                  <br />
+
+        <section className="w-full py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
+            <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
+              {/* Text Content */}
+              <div className="max-w-xl">
+                <p
+                  className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F5A623]"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  Who We Are
+                </p>
+
+                <h2
+                  className="mb-6 text-3xl font-extrabold leading-tight text-[#1B1464] sm:text-4xl lg:text-5xl"
+                  style={{ fontFamily: "'Syne', sans-serif" }}
+                >
+                  Turning Ideas Into{" "}
+                  <span className="text-[#F5A623]">Real Impact.</span>
+                </h2>
+
+                <p
+                  className="mb-5 text-base leading-8 text-[#4a4a6a] md:text-lg"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  Enactus FUTO is part of a global network of student, academic,
+                  and business leaders committed to using the power of
+                  entrepreneurial action to transform lives and shape a better,
+                  more sustainable world.
+                </p>
+
+                <p
+                  className="mb-8 text-base leading-8 text-[#4a4a6a] md:text-lg"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
                   We enable students to develop innovative solutions to
                   real-world challenges while building essential leadership,
                   teamwork, and business skills.
-                </span>
-              </p>
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#1B1464] font-bold px-6 py-3 rounded-md hover:bg-[#e09415] transition-colors duration-200"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Learn More <ArrowRight size={16} />
-              </Link>
+                </p>
+
+                <Link
+                  to="/about"
+                  className="group inline-flex items-center justify-center gap-3 rounded-md bg-[#F5A623] px-6 py-3.5 font-bold text-[#1B1464] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e09415] hover:shadow-lg"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  Learn More
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
+              </div>
+
+              {/* Image */}
+              <div className="relative mx-auto w-full max-w-xl md:ml-auto">
+                <div className="absolute -right-3 -top-3 h-full w-full rounded-2xl border-2 border-[#F5A623] sm:-right-4 sm:-top-4" />
+
+                <img
+                  src={image}
+                  alt="Enactus FUTO students working together to create meaningful community impact"
+                  className="relative z-10 aspect-[4/3] w-full rounded-2xl object-cover shadow-xl"
+                  loading="lazy"
+                />
+
+                <div className="absolute -bottom-4 left-4 z-20 rounded-lg bg-[#1B1464] px-5 py-3 shadow-lg sm:bottom-5 sm:-left-5">
+                  <p
+                    className="text-sm font-bold text-white"
+                    style={{ fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    People. Prosperity. Planet.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -309,7 +339,9 @@ const Home = () => {
 
                   {/* Footer */}
                   <div className="flex justify-between items-center pt-3 border-t border-gray-100 mt-2">
-                    <span className={`text-xs font-semibold ${project.metricColor} uppercase tracking-wide`}>
+                    <span
+                      className={`text-xs font-semibold ${project.metricColor} uppercase tracking-wide`}
+                    >
                       {project.metric}
                     </span>
                     {/* <div className="w-8 h-8 rounded-full bg-[#1B1464]/5 flex items-center justify-center group-hover:bg-[#F5A623] transition-colors duration-300">
