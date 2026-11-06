@@ -1,8 +1,9 @@
 import ESW from "../assets/Achievements/ESW.jpg";
-import ACT_AWARD from "../assets/Achievements/ACTAward.jpeg";
+import ACT from "../assets/Achievements/ACT.jpeg";
 import SEW from "../assets/Achievements/SEW.jpeg";
 import juliusB from "../assets/Achievements/juliusB.jpg";
 import Nationals2025 from "../assets/Achievements/Nationals2025.jpeg";
+import AWAC from "../assets/Achievements/AWAC.jpg";
 
 import SEO from "../component/SEO";
 import Hero from "../component/Hero";
@@ -35,13 +36,22 @@ const achievements = [
     imageAlt: "Enactus FUTO at the 2025 national competition",
   },
   {
-    img: ACT_AWARD,
+    img: AWAC,
     year: "2024",
-    title: "2nd RunnerUp - Action with Africa Challenge",
+    title: "4th Place - Action with Africa Challenge",
     category: "INTERNATIONAL COMPETITION",
     description:
-      "FUTO's ECOFUEL project placed fourth in the Action with Africa Challenge, earning €2,000 in recognition of its work.",
+      "Enactus FUTO competed globally in the Action With Africa Challenge in Astana, Kazakhstan, securing 4th position and winning €2,500 in grant funding for the Ecofuel project.",
     imageAlt: "Enactus FUTO Action with Africa Challenge recognition",
+  },
+  {
+    img: ACT,
+    year: "2024",
+    title: "2nd RunnerUp - ACT Foundation Leadership Challenge",
+    category: "NATIONAL COMPETITION",
+    description:
+      "Enactus FUTO emerged 3rd nationally in the ACT Foundation Leadership Challenge, winning ₦200,000 in grant funding for the Hydro-Eden project.",
+    imageAlt: "Enactus FUTO  ACT Foundation Leadership Challenge",
   },
   {
     img: SEW,
